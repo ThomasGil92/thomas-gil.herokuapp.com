@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
-const { v4: uuidv4 } = require('uuid');
+const { uuid } = require('uuidv4');
 const DIR = './public/';
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -9,7 +9,7 @@ const storage = multer.diskStorage({
     },
     filename: (req, file, cb) => {
         const fileName = file.originalname.toLowerCase().split(' ').join('-');
-        cb(null, uuidv4() + '-' + fileName)
+        cb(null, uuid() + '-' + fileName)
     }
 });
 const upload = multer({
@@ -26,11 +26,11 @@ const upload = multer({
 
 const {
     create,
+    list
     /* xpById,
     read,
     remove,
-    update,
-    list */
+    update, */
 } = require('../controllers/site.js');
 /* const {
     create,
@@ -47,10 +47,11 @@ const {
 
 
 router.post("/siteAdd", /* requireSignin, isAuth, */ upload.array('imgCollection', 6), create);
+router.get('/siteList', list);
 /* router.get('/xp/:xpId', read);
 router.delete('/xp/:xpId/:adminId', requireSignin, isAuth, remove);
 router.put('/xp/:xpId/:adminId', requireSignin, isAuth, upload.array('imgCollection', 6), update);
-router.get('/xps', list);
+
 router.get('/xp/photo/:xpId',photo); 
 
 

@@ -33,3 +33,11 @@ exports.create = (req, res) => {
             });
     })
 }
+
+exports.list = (req, res, next) => {
+    Site.find().sort( { from: -1 } ).then(data => {
+        res.status(200).json(data);
+
+    });
+
+};
