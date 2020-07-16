@@ -28,13 +28,13 @@ const WorkCardItem = () => {
     const WorkItem = (imgUrl, /* logo, */ bg, text, site, siteUrl) => {
         return (
             <div className=" mb-4" >
-                <div className="w-100" style={{ backgroundImage: `url(${imgUrl})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center", height: "250px" }}>
+                <div className="w-100 rounded" style={{ backgroundImage: `url(${imgUrl})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center", height: "250px" }}>
                     <div
                         onMouseEnter={() => onMouseEnterHandler(site)}
                         onMouseLeave={() => onMouseLeaveHandler(site)}
                         className="bg-dark-0_5 rounded w-100 h-100 d-flex align-items-center justify-content-center" >
                         {hovered.isHover._id === site._id ? (
-                            <a href={siteUrl} className="btn p-0 d-block h-100 w-100">
+                            <a style={{ boxSizing: "content-box" }} href={siteUrl} className="btn p-0 d-block h-100 w-100 rounded">
                                 <div className={bg + " text-center d-flex align-items-center justify-content-center  h-100 rounded "}>
 
                                     {/* <img src={logo} className="col-3" width="100%" /> */}
