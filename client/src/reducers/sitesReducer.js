@@ -1,4 +1,4 @@
-import { GET_SITES } from '../actions';
+import {GET_SITES} from '../actions';
 
 const initialState = { sites: [] }
 export default function sitesReducer(state = initialState, action) {

@@ -2,9 +2,14 @@ import { combineReducers } from 'redux';
 import sites from './sitesReducer';
 import accept from './acceptReducer';
 import user from './userReducer';
+import newSite from './newSiteReducer';
+import siteToUpdate from './siteReducer';
 
 export default combineReducers({
   sites: sites,
   accept:accept,
-  user:user
+  user:user,
+  newSite:newSite,
+  siteToUpdate:siteToUpdate
+  
 });

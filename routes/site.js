@@ -26,37 +26,35 @@ const upload = multer({
 
 const {
     create,
-    list
-    /* xpById,
+    list,
+    siteById,
     read,
-    remove,
-    update, */
+    update
+    /*remove,
+    , */
 } = require('../controllers/site.js');
-/* const {
-    create,
-    list
-} = require('../controllers/xp2.js'); 
 const {
     requireSignin,
     isAuth
 } = require('../controllers/auth');
 const {
-    adminById
-} = require('../controllers/admin');*/
+    userById
+} = require('../controllers/user');
 
 
 
-router.post("/siteAdd", /* requireSignin, isAuth, */ upload.array('imgCollection', 6), create);
+router.post("/siteAdd/:userId", requireSignin, isAuth, upload.array('imgCollection', 6), create);
 router.get('/siteList', list);
-/* router.get('/xp/:xpId', read);
-router.delete('/xp/:xpId/:adminId', requireSignin, isAuth, remove);
-router.put('/xp/:xpId/:adminId', requireSignin, isAuth, upload.array('imgCollection', 6), update);
+ router.get('/site/:siteId', read);
+ router.patch('/site/:siteId/:userId', requireSignin, isAuth, upload.array('imgCollection', 6), update);
+/*router.delete('/xp/:xpId/:adminId', requireSignin, isAuth, remove);
+
 
 router.get('/xp/photo/:xpId',photo); 
+*/
+router.param("siteId", siteById);
+router.param("userId", userById);
 
-
-router.param("adminId", adminById);
-router.param("xpId", xpById);*/
 
 
 module.exports = router;
