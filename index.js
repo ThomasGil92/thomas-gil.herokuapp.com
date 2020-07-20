@@ -30,9 +30,6 @@ app.use(expressValidator());
 app.use('/api', siteRouter);
 app.use('/api', userRouter);
 app.use('/public', express.static('public'))
-
-
-
 mongoose.connection.on('error', function (error) {
   console.log('Mongoose Connection Error : ' + error);
 });
