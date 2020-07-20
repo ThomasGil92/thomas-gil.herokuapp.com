@@ -1,13 +1,19 @@
 import { API } from '../config'
 import { get } from 'axios';
+import Cookie from 'js-cookie'
+import {useHistory} from 'react-router-dom'
 
 
+
+export const SET_ALERT = 'SET_ALERT';
+export const REMOVE_ALERT = 'REMOVE_ALERT';
 export const GET_SITES = 'GET_SITES';
 export const GET_SITE = 'GET_SITE';
 export const SET_ACCEPTANCE = 'SET_ACCEPTANCE';
 export const SET_USER = 'SET_USER';
 export const NEW_PUBLIC_SITE = 'NEW_PUBLIC_SITE';
 export const SET_NEW_SITE = 'SET_NEW_SITE';
+export const CLEAR_TO_UPDATE_SITE = 'CLEAR_TO_UPDATE_SITE';
 
 
 export function getSites() {
@@ -19,6 +25,16 @@ export function getSites() {
       .catch(function (error) { console.log('error', error); });
   };
 };
+export function setAlert(msg, alertType,timeout=5000) {
+  return function (dispatch) {
+    
+    dispatch({
+      type: SET_ALERT,
+      payload: { msg, alertType }
+    })
+    setTimeout(()=>dispatch({type:REMOVE_ALERT}),timeout)
+  }
+}
 export function getSite(siteId) {
   return function (dispatch) {
     return get(`${API}/site/${siteId}`)
@@ -51,6 +67,7 @@ export const getUser = (user) => {
     .then(data => {
       if (!data.error) {
         localStorage.setItem('jwt', JSON.stringify(data));
+        /* Cookie.set('j',JSON.stringify(data)) */
       }
     })
     .catch(err => {
@@ -82,14 +99,14 @@ export const postSite = (userId, token, site) => {
       console.log(err);
     });
 }
-export const editSite = (userId, token, site,siteId) => {
+export const editSite = (userId, token, site, siteId) => {
   return fetch(`${API}/site/${siteId}/${userId}`, {
-    method: 'POST',
+    method: 'PUT',
     headers: {
       Accept: 'application/json',
       Authorization: `Bearer ${token}`
     },
-    body: site
+    body: JSON.stringify(site)
   })
     .then(response => {
       return response.json();
@@ -98,9 +115,28 @@ export const editSite = (userId, token, site,siteId) => {
       console.log(err);
     });
 }
+export const deleteSite = (siteId, userId, token) => {
+  return fetch(`${API}/site/${siteId}/${userId}`, {
+    method: 'DELETE',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`
+    }
+  })
+    .then(response => {
+      return response.json()
+    })
+    .catch(err => console.log(err));
+};
 
 export function setNewSite(data) {
   return function (dispatch) {
-      dispatch({ type: SET_NEW_SITE, newSite:data })
+    dispatch({ type: SET_NEW_SITE, newSite: data })
+  };
+}
+export function clearToUpdateSite(data) {
+  return function (dispatch) {
+    dispatch({ type: CLEAR_TO_UPDATE_SITE, siteToUpdate: '' })
   };
 }

@@ -4,12 +4,14 @@ import accept from './acceptReducer';
 import user from './userReducer';
 import newSite from './newSiteReducer';
 import siteToUpdate from './siteReducer';
+import alert from './alertReducer';
 
 export default combineReducers({
   sites: sites,
   accept:accept,
   user:user,
   newSite:newSite,
-  siteToUpdate:siteToUpdate
+  siteToUpdate:siteToUpdate,
+  alert
   
 });

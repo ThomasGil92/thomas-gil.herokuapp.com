@@ -65,6 +65,7 @@ const ADNewProject = () => {
                 setImgCollection('')
                 dispatch(getSites());
                 document.getElementById("multer-file").value = "";
+                init()
                 /* history.go() */
             })
             .catch(function (error) { console.log(error); });

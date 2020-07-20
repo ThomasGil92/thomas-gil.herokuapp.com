@@ -1,70 +1,77 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import { useDispatch, useSelector } from 'react-redux'
-import { getSite,editSite,getSites } from '../actions'
+import { getSite, editSite, getSites, clearToUpdateSite } from '../actions'
 import moment from 'moment'
 moment.locale();
 
 const EditSiteItemPage = ({ match }) => {
+    const history = useHistory()
     const siteToUpdate = useSelector(state => state.siteToUpdate);
     const user = useSelector(state => state.user);
     const dispatch = useDispatch();
-    const [imgCollection, setImgCollection] = useState('')
     const [site, setFields] = useState({
-        title: '',
-        description: '',
-        url: '',
+        title: siteToUpdate.title,
+        description: "",
+        url: "",
         skills: [],
-        publicationDate: '',
-        formData: ''
+        publicationDate: "",
+        imgCollection: []
     })
-    const {
-        title=siteToUpdate.title,
-        description= siteToUpdate.description,
-        url= siteToUpdate.url,
-        skills= siteToUpdate.skills,
-        publicationDate= siteToUpdate.publicationDate,
-        formData
-    } = site
 
+    const {
+        title = site.title,
+        url= site.url,
+        description,
+        publicationDate,
+        skills
+    } = site
+    const init = () => {
+        dispatch(getSite(match.params._id))
+        setFields({
+            title: title,
+            description: description,
+            url: url,
+            skills: skills,
+            publicationDate: publicationDate,
+        })
+        console.log(site)
+    }
+
+    useEffect(() => {
+        init()
+    }, [])
 
     const handleChange = e => {
-        
+
         const value = e.target.value;
-        formData.set(e.target.name, value);
         setFields({ ...site, [e.target.name]: value });
         console.log(site)
     }
     const handleChangeFiles = e => {
-        setImgCollection({ ...e.target.files });
+        setFields({ ...site, imgCollection: e.target.files.key });
         console.log(site)
     }
 
     function handleSubmit(event) {
         event.preventDefault();
-        setFields({site})
-        for (const key of Object.keys(imgCollection)) {
-            formData.append('imgCollection', imgCollection[key])
-        }
-        editSite(user.user._id, user.token, formData,siteToUpdate._id)
+
+        console.log(site)
+        editSite(user.user._id, user.token, site, siteToUpdate._id)
             .then(function (response) {
                 console.log(response)
-                dispatch(getSites());
                 document.getElementById("multer-file").value = "";
-                // history.go() 
+
+                dispatch(getSites());
+                dispatch(clearToUpdateSite());
+                history.push("/admin-dashboard")
             })
             .catch(function (error) { console.log(error); });
     }
-    const init = () => {
-        dispatch(getSite(match.params._id))
-        setFields({ formData: new FormData() });
-    }
-    useEffect(() => {
-        init()
-    }, [])
+
     return (
         <div className="container-fluid px-0 text-center mx-auto justify-content-center">
-            {siteToUpdate && (
+            {site && siteToUpdate && (
                 <div>
                     <h1>Modifier les informations du site {siteToUpdate.title}</h1>
                     <div className="col-6 mx-auto">
@@ -74,22 +81,22 @@ const EditSiteItemPage = ({ match }) => {
 
                         <form onSubmit={handleSubmit}>
                             <div className="form-group">
-                                <input type="text" name="title" required defaultValue={title} onChange={handleChange} className="form-control" placeholder="Title" />
+                                <input type="text" name="title" required defaultValue={site.title} onChange={handleChange} className="form-control" placeholder="Title" />
                             </div>
                             <div className="form-group">
-                                <input type="text" name="url" required defaultValue={url} onChange={handleChange} className="form-control" placeholder="url" />
+                                <input type="text" name="url" required defaultValue={siteToUpdate.url} onChange={handleChange} className="form-control" placeholder="url" />
                             </div>
                             <div className="form-group">
-                                <input type="text" name="skills" required defaultValue={skills} onChange={handleChange} className="form-control" placeholder="Skills" />
+                                <input type="text" name="skills" required defaultValue={siteToUpdate.skills} onChange={handleChange} className="form-control" placeholder="Skills" />
                             </div>
                             <div className="form-group">
-                                <input type="date" name="publicationDate" required defaultValue={publicationDate} onChange={handleChange} className="form-control" placeholder="Date de publication" />
+                                <input type="date" name="publicationDate" required defaultValue={siteToUpdate.publicationDate} onChange={handleChange} className="form-control" placeholder="Date de publication" />
                             </div>
                             <div className="form-group">
-                                <textarea name="description" rows="5" required defaultValue={description} onChange={handleChange} className="form-control" placeholder="Description" />
+                                <textarea name="description" rows="5" required defaultValue={siteToUpdate.description} onChange={handleChange} className="form-control" placeholder="Description" />
                             </div>
                             <div className="form-group">
-                                <input type="file" id="multer-file" name="imgCollection" onChange={handleChangeFiles} multiple />
+                                <input type="file" id="multer-file" name="imgCollection" onChange={handleChangeFiles} multiple required />
                             </div>
                             <div className="btn-group">
                                 <input type="submit" value="Submit" className="btn btn-primary" />
@@ -100,7 +107,7 @@ const EditSiteItemPage = ({ match }) => {
             )}
             {/* <p>{siteToUpdate.imgCollection[0]}</p> */}
 
-
+            {JSON.stringify(site)}
             <Link to="/admin-dashboard">Retour a l'Administration</Link>
 
         </div>

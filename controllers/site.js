@@ -58,12 +58,51 @@ exports.list = (req, res, next) => {
 
 };
 
-exports.update = (req, res, next) => {
-    Site.findByIdAndUpdate({ _id: req.params.id },
+/* exports.update = (req, res, next) => {
+    Site.findOneAndUpdate({ _id: req.params.id },
         { $set: req.body },
         { new: true })
         .then(doc => res.status(200).json(doc))
         .catch(err =>
             res.status(400).json({ update: err }))
     next();
+}; */
+exports.update = (req,res) => {
+    const reqFiles = [];
+    const url = req.protocol + '://' + req.get('host')
+    for (var i = 0; i < req.files.length; i++) {
+        reqFiles.push(url + '/public/' + req.files[i].filename)
+    }
+
+
+    const newSite = new Site({
+        imgCollection: reqFiles,
+        title: req.body.title,
+        description: req.body.description,
+        url: req.body.url,
+        publicationDate: req.body.publicationDate,
+        skills: Array.isArray(req.body.skills)
+            ? req.body.skills
+            : req.body.skills.split(',').map(skill => skill.trim())
+    });
+    Site.findOneAndUpdate({ _id:req.site.id }, newSite, { new:true }, (err,site) => {
+      if(err){
+      return res.json({'success':false,'message':'Some Error','error':err});
+      }
+      console.log(site);
+      return res.json({'success':true,'message':'Updated successfully',site});
+    })
+  }
+  exports.remove = (req,res) => {
+    let site = req.site;
+    site.remove((err, deletedSite) => {
+        if (err) {
+            return res.status(400).json({
+                error: errorHandler(err)
+            });
+        }
+        res.json({
+            message: "Site project deleted successfully"
+        });
+    });
 };

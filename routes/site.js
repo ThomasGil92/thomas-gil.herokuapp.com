@@ -29,9 +29,8 @@ const {
     list,
     siteById,
     read,
-    update
-    /*remove,
-    , */
+    update,
+    remove
 } = require('../controllers/site.js');
 const {
     requireSignin,
@@ -46,12 +45,11 @@ const {
 router.post("/siteAdd/:userId", requireSignin, isAuth, upload.array('imgCollection', 6), create);
 router.get('/siteList', list);
  router.get('/site/:siteId', read);
- router.patch('/site/:siteId/:userId', requireSignin, isAuth, upload.array('imgCollection', 6), update);
-/*router.delete('/xp/:xpId/:adminId', requireSignin, isAuth, remove);
+ router.put('/site/:siteId/:userId', requireSignin, isAuth, upload.array('imgCollection', 6), update);
+router.delete('/site/:siteId/:userId', requireSignin, isAuth, remove);
 
 
-router.get('/xp/photo/:xpId',photo); 
-*/
+
 router.param("siteId", siteById);
 router.param("userId", userById);
 

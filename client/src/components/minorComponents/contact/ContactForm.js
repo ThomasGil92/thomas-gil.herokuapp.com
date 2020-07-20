@@ -1,23 +1,30 @@
 import React, { Fragment } from 'react'
 import emailjs from 'emailjs-com';
+import { setAlert } from '../../../actions'
+import { useDispatch } from 'react-redux'
+import Alert from '../layout/alert'
 
 const ContactForm = () => {
-
+    const dispatch = useDispatch()
     const sendEmail = (e) => {
         e.preventDefault();
         emailjs.sendForm('gmail', 'ContactUs', e.target, 'user_4OCMAoXXWlSfnD7fgLVEP')
             .then((result) => {
                 console.log(result.text);
-                window.location.reload(true);
+                document.getElementById("contactForm").reset();
+                dispatch(setAlert("Votre message à bien été envoyé", "info"))
+
             }, (error) => {
                 console.log(error.text);
-            });
+                dispatch(setAlert("Une erreur est survenue", "danger"))
+            })      
     };
     return (
         <Fragment>
             <div id="contact-background" className="col-12 d-flex pb-5 align-items-center text-dark text-left">
                 <div className="flex-column col-10 col-md-6 mx-auto my-auto">
                     <form
+                    id="contactForm"
                         className="contact-form d-flex flex-column"
                         onSubmit={sendEmail}
                     >
@@ -51,6 +58,7 @@ const ContactForm = () => {
                             type="submit"
                         ><h4 className="m-0">Envoyer le message</h4>
                         </button>
+                        <Alert />
 
                     </form>
                 </div>

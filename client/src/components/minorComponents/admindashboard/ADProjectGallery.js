@@ -1,9 +1,18 @@
 import React, { Fragment } from "react"
 import {Link} from 'react-router-dom'
-import { useSelector } from 'react-redux'
-const ADHeader = () => {
+import { useSelector,useDispatch } from 'react-redux'
+import {deleteSite,getSites} from '../../../actions'
+const ADProjectGallery = () => {
     const sites = useSelector(state => state.sites);
-
+    const user = useSelector(state => state.user);
+    const dispatch=useDispatch();
+const handleDelete=(siteId)=>e=>{
+    e.preventDefault();
+    deleteSite(siteId,user.user._id,user.token)
+    .then(()=>{
+        dispatch(getSites())
+    })
+}
     return (
 
         <Fragment>
@@ -26,7 +35,8 @@ const ADHeader = () => {
                                 }}
                             />
                             <div className="card-body">
-                                <Link className="btn btn-danger" to={`/admin-dashboard/edit/site/${site._id}`}>Modifier les information de ce site</Link>
+                                {/* <Link className="btn btn-danger" to={`/admin-dashboard/edit/site/${site._id}`}>Modifier les information de ce site</Link> */}
+                                <button className="btn btn-danger" type="button" onClick={handleDelete(site._id)}>Delete</button>
                             </div>
                         </div>
                     )
@@ -37,4 +47,4 @@ const ADHeader = () => {
     )
 }
 
-export default ADHeader
+export default ADProjectGallery
