@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { getUser, setUser } from '../../../actions';
+import { getUser, setUser,setAlert } from '../../../actions';
 import { useHistory } from "react-router-dom";
 
 
@@ -28,8 +28,8 @@ const SigninForm = (props) => {
                 dispatch(setUser());
                 history.push("/")
             })
-            .catch(err=>{
-                console.log(err)
+            .catch(error=>{
+                console.log(error)
             })
 
     };
@@ -47,6 +47,7 @@ const SigninForm = (props) => {
                 </label>
                 <input value={password} onChange={handleChange('password')} type="password" className="form-control" />
             </div>
+            <Alert msg="Les données saisies doivent être inccorectes" alertType="danger"/>
             <button onClick={clickSubmit} className="btn btn-primary">Submit</button>
         </form>
     )
