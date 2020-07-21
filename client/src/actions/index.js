@@ -61,13 +61,8 @@ export const getUser = (user) => {
     },
     body: JSON.stringify(user)
   })
-    .then(response => {
-
-    })
     .then(data => {
       return data.json();
-
-
     })
     .catch(err => {
       console.log(err);
