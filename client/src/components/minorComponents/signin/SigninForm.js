@@ -31,7 +31,6 @@ const SigninForm = (props) => {
                 } else {
                     authenticate(data, () => {
                         dispatch(setUser());
-                        if(!data.error)
                         history.push("/admin-dashboard")
                         dispatch(setAlert("Vous êtes connécté", "info"))
                     })
