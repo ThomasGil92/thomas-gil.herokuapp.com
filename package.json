@@ -4,7 +4,7 @@
   "description": "Site  de développeur web en MERN stack + redux",
   "main": "index.js",
   "engines": {
-    "node": "12.x"
+    "node": "12.14"
   },
   "scripts": {
     "start": "node index.js",
