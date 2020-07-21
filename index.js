@@ -28,8 +28,8 @@ app.use(cookieParser());
 app.use(expressValidator());
 app.use('/api', siteRouter);
 app.use('/api', userRouter);
-app.use('/public', express.static('public'))
-app.use(express.static('client/build'));
+app.use('/public', express.static('public'))/* 
+app.use(express.static('client/build')); */
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html')); // relative path
