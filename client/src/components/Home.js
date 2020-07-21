@@ -7,7 +7,7 @@ import Skills from './minorComponents/Skills';
 import LastWorks from './minorComponents/LastWorks';
 import Footer from './minorComponents/Footer';
 import Cookie from './minorComponents/Cookie';
-import Alert from './components/layout/alert';
+import Alert from './components/minorComponents/layout/alert';
 
 const Home = () => {
 
