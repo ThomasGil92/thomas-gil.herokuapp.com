@@ -4,7 +4,7 @@
   "description": "Site  de développeur web en MERN stack + redux",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node index.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run start\" \"npm run client\"",
     "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
