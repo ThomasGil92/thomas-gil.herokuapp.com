@@ -28,6 +28,9 @@ const SigninForm = (props) => {
                 dispatch(setUser());
                 history.push("/")
             })
+            .catch(err=>{
+                console.log(err)
+            })
 
     };
     return (
