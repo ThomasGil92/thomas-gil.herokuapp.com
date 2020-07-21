@@ -26,7 +26,7 @@ const SigninForm = (props) => {
         setValues({ ...values, error: false, loading: true });
         getUser({ email, password })
             .then(data => {
-                if (data.error) {
+                if (data.err) {
                     dispatch(setAlert("Une erreur est survenue", "danger"))
                 } else {
                     authenticate(data, () => {
