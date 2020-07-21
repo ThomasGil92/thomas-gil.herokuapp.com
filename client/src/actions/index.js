@@ -66,6 +66,7 @@ export const getUser = (user) => {
     })
     .catch(err => {
       console.log(err);
+      return error.json()
     });
 }
 
