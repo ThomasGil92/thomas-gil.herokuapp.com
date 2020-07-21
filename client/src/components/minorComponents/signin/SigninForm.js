@@ -27,10 +27,11 @@ const SigninForm = (props) => {
         getUser({ email, password })
             .then(data => {
                 if (data.error) {
-                    dispatch(setUser());
                     dispatch(setAlert("Une erreur est survenue", "danger"))
                 } else {
                     authenticate(data, () => {
+                        dispatch(setUser());
+                        if(!data.error)
                         history.push("/admin-dashboard")
                         dispatch(setAlert("Vous êtes connécté", "info"))
                     })
