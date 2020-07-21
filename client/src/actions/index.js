@@ -74,7 +74,7 @@ export const getUser = (user) => {
 }
 
 export const authenticate = (data,next) => {
-  if (!data.error) {
+  if (!data.err) {
     localStorage.setItem('jwt', JSON.stringify(data));
     next()
   }
