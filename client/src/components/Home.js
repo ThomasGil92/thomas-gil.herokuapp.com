@@ -14,15 +14,16 @@ const Home = () => {
   return (
     <div className="container-fluid px-0">
       <Menu />
+      <Alert />
       <HomeHeader />
-      <Alert/>
+
       <LaptopAndSkills />
       <Skills />
       <LastWorks />
-      <Footer/>
+      <Footer />
       <div className="fixed-bottom col-12 p-0 bg-dark">
-                <Cookie />
-            </div>
+        <Cookie />
+      </div>
       {/*   <div>
 
         <h2>
