@@ -7,7 +7,7 @@ const serveIndex = require('serve-index'); */
 app.use(compression());
 const PORT = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, 'build')));
-app.use('/static', express.static('public'))
+app.use('/public', express.static('public'))
  
 app.get('*', function(req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
