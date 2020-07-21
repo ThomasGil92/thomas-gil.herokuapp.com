@@ -34,7 +34,7 @@ const SigninForm = (props) => {
                     useDispatch(setAlert("Les données saisies doivent être inccorectes", "danger"))
                 }
 
-            });
+            })};
         return (
             <form>
                 <div className="form-group">
