@@ -29,9 +29,9 @@ const SigninForm = (props) => {
                 dispatch(setUser());
                 history.push("/")
             })
-            .catch(error=>{
+            .catch(err=>{
+                console.log(err)
                 useDispatch(setAlert("Les données saisies doivent être inccorectes","danger"))
-                console.log(error)
             })
 
     };
