@@ -26,32 +26,36 @@ const SigninForm = (props) => {
         setValues({ ...values, error: false, loading: true });
         getUser({ email, password })
             .then(data => {
-                dispatch(setUser());
-                if (!data.err) {
-                    history.push("/")
-                } else {
+                if (data.err) {
                     /* dispatch(setAlert("Les données saisies doivent être inccorectes", "danger")) */
+                } else {
+                    dispatch(setUser());
+                    history.push("/")
                 }
 
-            })};
-        return (
-            <form>
-                <div className="form-group">
-                    <label className="text-muted">
-                        Email
-                </label>
-                    <input value={email} onChange={handleChange('email')} type="email" className="form-control" />
-                </div>
-                <div className="form-group">
-                    <label className="text-muted">
-                        Password
-                </label>
-                    <input value={password} onChange={handleChange('password')} type="password" className="form-control" />
-                </div>
-                <Alert msg="Les données saisies doivent être inccorectes" alertType="danger" />
-                <button onClick={clickSubmit} className="btn btn-primary">Submit</button>
-            </form>
-        )
-    }
 
-    export default SigninForm
+
+
+            })
+    };
+    return (
+        <form>
+            <div className="form-group">
+                <label className="text-muted">
+                    Email
+                </label>
+                <input value={email} onChange={handleChange('email')} type="email" className="form-control" />
+            </div>
+            <div className="form-group">
+                <label className="text-muted">
+                    Password
+                </label>
+                <input value={password} onChange={handleChange('password')} type="password" className="form-control" />
+            </div>
+            <Alert msg="Les données saisies doivent être inccorectes" alertType="danger" />
+            <button onClick={clickSubmit} className="btn btn-primary">Submit</button>
+        </form>
+    )
+}
+
+export default SigninForm
