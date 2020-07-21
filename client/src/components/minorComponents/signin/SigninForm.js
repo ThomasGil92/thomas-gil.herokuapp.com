@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getUser, setUser, setAlert, authenticate } from '../../../actions';
-import { useHistory } from "react-router-dom";
+import { useHistory,Redirect } from "react-router-dom";
 import Alert from '../layout/alert'
 
 
@@ -40,6 +40,7 @@ const SigninForm = (props) => {
             )
     };
     return (
+        user.length && user.token ? (
         <form>
             <div className="form-group">
                 <label className="text-muted">
@@ -56,6 +57,9 @@ const SigninForm = (props) => {
             <Alert msg="Les données saisies doivent être inccorectes" alertType="danger" />
             <button onClick={clickSubmit} className="btn btn-primary">Submit</button>
         </form>
+        ):(
+            <Redirect to="/"/>
+        )
     )
 }
 
