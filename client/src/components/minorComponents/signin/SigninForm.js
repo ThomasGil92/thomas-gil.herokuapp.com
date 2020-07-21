@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getUser, setUser,setAlert } from '../../../actions';
 import { useHistory } from "react-router-dom";
+import Alert from '../layout/alert'
 
 
 const SigninForm = (props) => {
@@ -29,6 +30,7 @@ const SigninForm = (props) => {
                 history.push("/")
             })
             .catch(error=>{
+                useDispatch(setAlert("Les données saisies doivent être inccorectes","danger"))
                 console.log(error)
             })
 
