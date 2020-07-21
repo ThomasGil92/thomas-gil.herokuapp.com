@@ -1,7 +1,7 @@
 import { API } from '../config'
 import { get } from 'axios';
 import Cookie from 'js-cookie'
-import {useHistory} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 
 
@@ -25,14 +25,14 @@ export function getSites() {
       .catch(function (error) { console.log('error', error); });
   };
 };
-export function setAlert(msg, alertType,timeout=5000) {
+export function setAlert(msg, alertType, timeout = 5000) {
   return function (dispatch) {
-    
+
     dispatch({
       type: SET_ALERT,
       payload: { msg, alertType }
     })
-    setTimeout(()=>dispatch({type:REMOVE_ALERT}),timeout)
+    setTimeout(() => dispatch({ type: REMOVE_ALERT }), timeout)
   }
 }
 export function getSite(siteId) {
@@ -62,17 +62,26 @@ export const getUser = (user) => {
     body: JSON.stringify(user)
   })
     .then(response => {
-      return response.json();
+
     })
     .then(data => {
-      if (!data.error) {
-        localStorage.setItem('jwt', JSON.stringify(data));
-        /* Cookie.set('j',JSON.stringify(data)) */
-      }
+      return data.json();
+
+
     })
     .catch(err => {
       console.log(err);
     });
+}
+
+export const authenticate = (data,next) => {
+  if (!data.error) {
+    localStorage.setItem('jwt', JSON.stringify(data));
+    next()
+  }
+  if(data.err){
+    console.log(data.err)
+  }
 }
 
 export function setUser() {

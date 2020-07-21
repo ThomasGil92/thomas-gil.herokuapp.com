@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { getUser, setUser, setAlert } from '../../../actions';
+import { getUser, setUser, setAlert,authenticate } from '../../../actions';
 import { useHistory } from "react-router-dom";
 import Alert from '../layout/alert'
 
@@ -26,12 +26,18 @@ const SigninForm = (props) => {
         setValues({ ...values, error: false, loading: true });
         getUser({ email, password })
             .then(data => {
-                dispatch(setUser());
-                dispatch(setAlert("Une erreur est survenue", "danger"))
-            }, (err) => {
-                console.log(err.text);
-                
-            }   
+                if (data.error) {
+                    dispatch(setUser());
+                    dispatch(setAlert("Une erreur est survenue", "danger"))
+                }else{
+                    authenticate(data,()=>{
+                        dispatch(setAlert("Vous êtes connécté", "danger"))
+                        .then(()=>{
+                            history.push("/admin-dashboard")
+                        })
+                    })
+                }
+            }
 
             )
     };
