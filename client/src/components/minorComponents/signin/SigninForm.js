@@ -40,7 +40,7 @@ const SigninForm = (props) => {
             )
     };
 
-    if (user.token) {
+    if (!user.token) {
         return (
             <form>
                 <div className="form-group">
