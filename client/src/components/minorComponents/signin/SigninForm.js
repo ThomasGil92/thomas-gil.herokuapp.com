@@ -31,7 +31,7 @@ const SigninForm = (props) => {
                     history.push("/")
                 } else {
                     console.log(error)
-                    dispatch(setAlert("Les données saisies doivent être inccorectes", "danger"))
+                    /* dispatch(setAlert("Les données saisies doivent être inccorectes", "danger")) */
                 }
 
             })};
