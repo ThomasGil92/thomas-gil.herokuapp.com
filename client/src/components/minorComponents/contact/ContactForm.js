@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react'
 import emailjs from 'emailjs-com';
+import {useHistory} from 'react-router-dom'
 import { setAlert } from '../../../actions'
-import { useDispatch,useHistory } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import Alert from '../layout/alert'
 
 const ContactForm = () => {
