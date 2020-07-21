@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getUser, setUser, setAlert, authenticate } from '../../../actions';
-import { useHistory,Redirect } from "react-router-dom";
+import { useHistory, Redirect } from "react-router-dom";
 import Alert from '../layout/alert'
 
 
@@ -39,28 +39,31 @@ const SigninForm = (props) => {
 
             )
     };
-    return (
-        !user.token.length ? (
-        <form>
-            <div className="form-group">
-                <label className="text-muted">
-                    Email
+
+    if (user.token) {
+        return (
+            <form>
+                <div className="form-group">
+                    <label className="text-muted">
+                        Email
                 </label>
-                <input value={email} onChange={handleChange('email')} type="email" className="form-control" />
-            </div>
-            <div className="form-group">
-                <label className="text-muted">
-                    Password
+                    <input value={email} onChange={handleChange('email')} type="email" className="form-control" />
+                </div>
+                <div className="form-group">
+                    <label className="text-muted">
+                        Password
                 </label>
-                <input value={password} onChange={handleChange('password')} type="password" className="form-control" />
-            </div>
-            <Alert msg="Les données saisies doivent être inccorectes" alertType="danger" />
-            <button onClick={clickSubmit} className="btn btn-primary">Submit</button>
-        </form>
-        ):(
-            <Redirect to="/admin-dashboard"/>
+                    <input value={password} onChange={handleChange('password')} type="password" className="form-control" />
+                </div>
+                <Alert msg="Les données saisies doivent être inccorectes" alertType="danger" />
+                <button onClick={clickSubmit} className="btn btn-primary">Submit</button>
+            </form>
         )
-    )
+    } else {
+        return (
+            <Redirect to={"/admin-dashboard"} />
+        )
+    }
 }
 
 export default SigninForm
