@@ -27,9 +27,10 @@ const SigninForm = (props) => {
         getUser({ email, password })
             .then(data => {
                 dispatch(setUser());
+                dispatch(setAlert("Une erreur est survenue", "danger"))
             }, (error) => {
                 console.log(error.text);
-                dispatch(setAlert("Une erreur est survenue", "danger"))
+                
             }   
 
             )
