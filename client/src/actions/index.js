@@ -62,11 +62,14 @@ export const getUser = (user) => {
     body: JSON.stringify(user)
   })
     .then(data => {
+      if(data.err){
+        return data.err
+      }
+      if(!data.err)
       return data.json();
     })
     .catch(err => {
       console.log(err);
-      return error.json()
     });
 }
 
