@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { getUser, setUser,setAlert } from '../../../actions';
+import { getUser, setUser, setAlert } from '../../../actions';
 import { useHistory } from "react-router-dom";
 import Alert from '../layout/alert'
 
@@ -27,32 +27,32 @@ const SigninForm = (props) => {
         getUser({ email, password })
             .then(data => {
                 dispatch(setUser());
-                history.push("/")
-            })
-            .catch(err=>{
-                console.log(err)
-                useDispatch(setAlert("Les données saisies doivent être inccorectes","danger"))
-            })
+                if (!data.error) {
+                    history.push("/")
+                } else {
+                    console.log(err)
+                    useDispatch(setAlert("Les données saisies doivent être inccorectes", "danger"))
+                }
 
-    };
-    return (
-        <form>
-            <div className="form-group">
-                <label className="text-muted">
-                    Email
+            });
+        return (
+            <form>
+                <div className="form-group">
+                    <label className="text-muted">
+                        Email
                 </label>
-                <input value={email} onChange={handleChange('email')} type="email" className="form-control" />
-            </div>
-            <div className="form-group">
-                <label className="text-muted">
-                    Password
+                    <input value={email} onChange={handleChange('email')} type="email" className="form-control" />
+                </div>
+                <div className="form-group">
+                    <label className="text-muted">
+                        Password
                 </label>
-                <input value={password} onChange={handleChange('password')} type="password" className="form-control" />
-            </div>
-            <Alert msg="Les données saisies doivent être inccorectes" alertType="danger"/>
-            <button onClick={clickSubmit} className="btn btn-primary">Submit</button>
-        </form>
-    )
-}
+                    <input value={password} onChange={handleChange('password')} type="password" className="form-control" />
+                </div>
+                <Alert msg="Les données saisies doivent être inccorectes" alertType="danger" />
+                <button onClick={clickSubmit} className="btn btn-primary">Submit</button>
+            </form>
+        )
+    }
 
-export default SigninForm
+    export default SigninForm
