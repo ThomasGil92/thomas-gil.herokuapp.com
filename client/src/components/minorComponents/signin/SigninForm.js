@@ -12,7 +12,7 @@ const SigninForm = (props) => {
         loading: false,
         redirectToReferrer: false,
     });
-    const { email, password, error, loading, redirectToReferrer } = values;
+    const { email, password } = values;
     const user = useSelector(state => state.user);
     const history = useHistory();
     const dispatch = useDispatch();
