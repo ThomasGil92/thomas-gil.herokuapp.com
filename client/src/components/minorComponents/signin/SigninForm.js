@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { getUser, setUser, setAlert,authenticate } from '../../../actions';
+import { getUser, setUser, setAlert, authenticate } from '../../../actions';
 import { useHistory } from "react-router-dom";
 import Alert from '../layout/alert'
 
@@ -29,12 +29,10 @@ const SigninForm = (props) => {
                 if (data.error) {
                     dispatch(setUser());
                     dispatch(setAlert("Une erreur est survenue", "danger"))
-                }else{
-                    authenticate(data,()=>{
-                        dispatch(setAlert("Vous êtes connécté", "danger"))
-                        .then(()=>{
-                            history.push("/admin-dashboard")
-                        })
+                } else {
+                    authenticate(data, () => {
+                        history.push("/admin-dashboard")
+                        dispatch(setAlert("Vous êtes connécté", "info"))
                     })
                 }
             }

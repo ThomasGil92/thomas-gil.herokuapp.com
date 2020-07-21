@@ -1,17 +1,19 @@
 import React, { Fragment } from 'react'
 import emailjs from 'emailjs-com';
 import { setAlert } from '../../../actions'
-import { useDispatch } from 'react-redux'
+import { useDispatch,useHistory } from 'react-redux'
 import Alert from '../layout/alert'
 
 const ContactForm = () => {
     const dispatch = useDispatch()
+    const history=useHistory()
     const sendEmail = (e) => {
         e.preventDefault();
         emailjs.sendForm('gmail', 'ContactUs', e.target, 'user_4OCMAoXXWlSfnD7fgLVEP')
             .then((result) => {
                 console.log(result.text);
                 document.getElementById("contactForm").reset();
+                history.push("/")
                 dispatch(setAlert("Votre message à bien été envoyé", "info"))
 
             }, (error) => {

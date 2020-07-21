@@ -7,6 +7,7 @@ import Skills from './minorComponents/Skills';
 import LastWorks from './minorComponents/LastWorks';
 import Footer from './minorComponents/Footer';
 import Cookie from './minorComponents/Cookie';
+import Alert from './components/layout/alert';
 
 const Home = () => {
 
@@ -14,6 +15,7 @@ const Home = () => {
     <div className="container-fluid px-0">
       <Menu />
       <HomeHeader />
+      <Alert/>
       <LaptopAndSkills />
       <Skills />
       <LastWorks />
