@@ -35,7 +35,7 @@ exports.signin = (req, res) => {
         //create auth method in user model
         if (!user.authenticate(password)) {
             return res.status(401).json({
-                error: "Email and password dont match"
+                err: "Email and password dont match"
             });
         }
         //generate a signed token with id and secret
