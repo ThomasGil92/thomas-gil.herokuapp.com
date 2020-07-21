@@ -40,7 +40,7 @@ const SigninForm = (props) => {
             )
     };
     return (
-        user.length && user.token ? (
+        user.token.length ? (
         <form>
             <div className="form-group">
                 <label className="text-muted">
