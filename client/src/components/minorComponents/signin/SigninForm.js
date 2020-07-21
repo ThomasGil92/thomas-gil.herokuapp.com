@@ -28,8 +28,8 @@ const SigninForm = (props) => {
             .then(data => {
                 dispatch(setUser());
                 dispatch(setAlert("Une erreur est survenue", "danger"))
-            }, (error) => {
-                console.log(error.text);
+            }, (err) => {
+                console.log(err.text);
                 
             }   
 
