@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Site  de développeur web en MERN stack + redux",
   "main": "index.js",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "start": "node index.js",
     "client": "npm run start --prefix client",
