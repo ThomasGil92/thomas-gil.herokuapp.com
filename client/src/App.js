@@ -14,7 +14,7 @@ function App() {
       <Route exact path="/" component={Home} />     
       <Route exact path="/CV" component={CV} />     
       <Route exact path="/contact" component={Contact} />     
-      <Route exact path="/signin" component={Signin} /> 
+      <Route exact path="/signin-d" component={Signin} /> 
       <AdminRoute/>    
     </Switch>
     </Router>
