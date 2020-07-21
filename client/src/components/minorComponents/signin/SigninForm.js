@@ -26,7 +26,6 @@ const SigninForm = (props) => {
         setValues({ ...values, error: false, loading: true });
         getUser({ email, password })
             .then(data => {
-                console.log(data.err)
                 dispatch(setAlert("Les données saisies doivent être inccorectes", "danger"))
                 dispatch(setUser());
             }
