@@ -30,7 +30,7 @@ const SigninForm = (props) => {
                 if (!data.error) {
                     history.push("/")
                 } else {
-                    console.log(err)
+                    console.log(error)
                     dispatch(setAlert("Les données saisies doivent être inccorectes", "danger"))
                 }
 
