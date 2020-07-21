@@ -40,7 +40,7 @@ const SigninForm = (props) => {
             )
     };
     return (
-        user.token.length ? (
+        !user.token.length ? (
         <form>
             <div className="form-group">
                 <label className="text-muted">
@@ -58,7 +58,7 @@ const SigninForm = (props) => {
             <button onClick={clickSubmit} className="btn btn-primary">Submit</button>
         </form>
         ):(
-            <Redirect to="/"/>
+            <Redirect to="/admin-dashboard"/>
         )
     )
 }
