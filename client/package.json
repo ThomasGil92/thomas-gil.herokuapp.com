@@ -9,6 +9,7 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
     "emailjs-com": "^2.4.1",
     "js-cookie": "^2.2.1",
     "path": "^0.12.7",
@@ -22,7 +23,8 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-immutable-state-invariant": "^2.1.0",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "serve-index": "^1.9.1"
   },
   "scripts": {
     "start": "node server.js",
