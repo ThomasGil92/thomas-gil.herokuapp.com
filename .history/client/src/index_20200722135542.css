@@ -80,31 +80,16 @@ code {
     left: 10%;
   }
   .last-work{
-    margin-top:1200px
+    margin-top:1000px
   }
   
 }
 @media screen and (min-width: 1024px) {
   .middle-section {
-    margin-top: 600px!important;
+    margin-top: 600px;
   }
   .desktop-img {
-    margin-top:-380px;
     left: 10%;
   }
-  .last-work{
-    margin-top:900px!important;
-  }
+  
 }
-@media screen and (min-width:1024px) and (orientation:landscape){
-  .middle-section {
-    margin-top: 350px;
-  }
-  .desktop-img {
-    top:-250px
-  }
-  .last-work{
-    margin-top:1100px
-  }
-}
-

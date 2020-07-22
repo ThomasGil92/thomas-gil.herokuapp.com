@@ -52,59 +52,29 @@ code {
 }
 .skills-card{
   margin-top:-60px;
-  left: 50%;
-    transform: translate(-50%, 0);
+  left:10%;
 }
 .last-work{
-  margin-top:2850px
+  margin-top:2900px
 }
-
-@media screen and (min-width:450px) and (orientation:landscape){
-  .middle-section {
-    margin-top: 300px;
-  }
-  .desktop-img {
-    top:-320px
-  }
-  .last-work{
-    margin-top:2300px
-  }
-}
-
 @media screen and (min-width: 768px) {
   .middle-section {
-    margin-top: 350px;
+    margin-top: 600px;
   }
   .desktop-img {
-    margin-top:-150px;
     left: 10%;
   }
   .last-work{
-    margin-top:1200px
+    margin-top:2800px
   }
   
 }
 @media screen and (min-width: 1024px) {
   .middle-section {
-    margin-top: 600px!important;
+    margin-top: 600px;
   }
   .desktop-img {
-    margin-top:-380px;
     left: 10%;
   }
-  .last-work{
-    margin-top:900px!important;
-  }
+  
 }
-@media screen and (min-width:1024px) and (orientation:landscape){
-  .middle-section {
-    margin-top: 350px;
-  }
-  .desktop-img {
-    top:-250px
-  }
-  .last-work{
-    margin-top:1100px
-  }
-}
-

@@ -92,9 +92,7 @@ code {
     margin-top:-380px;
     left: 10%;
   }
-  .last-work{
-    margin-top:900px!important;
-  }
+  
 }
 @media screen and (min-width:1024px) and (orientation:landscape){
   .middle-section {

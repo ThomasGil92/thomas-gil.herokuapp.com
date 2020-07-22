@@ -86,25 +86,22 @@ code {
 }
 @media screen and (min-width: 1024px) {
   .middle-section {
-    margin-top: 600px!important;
+    margin-top: 600px;
   }
   .desktop-img {
-    margin-top:-380px;
     left: 10%;
   }
-  .last-work{
-    margin-top:900px!important;
-  }
+  
 }
 @media screen and (min-width:1024px) and (orientation:landscape){
   .middle-section {
-    margin-top: 350px;
+    margin-top: 300px;
   }
   .desktop-img {
-    top:-250px
+    top:-320px
   }
   .last-work{
-    margin-top:1100px
+    margin-top:2300px
   }
 }
 

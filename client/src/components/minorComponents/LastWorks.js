@@ -6,7 +6,7 @@ import WorkCardItem from './WorkCardItem'
 const LastWorks = () => {
     return (
         <Fragment>
-            <div className="col-12 text-center last-work mt-5">
+            <div className="col-12 text-center last-work ">
                 <h1 className="text-dark">Travaux Récents</h1>
             </div>
             <div className="container-fluid pb-5">

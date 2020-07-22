@@ -89,12 +89,10 @@ code {
     margin-top: 600px!important;
   }
   .desktop-img {
-    margin-top:-380px;
+    margin-top:-350px;
     left: 10%;
   }
-  .last-work{
-    margin-top:900px!important;
-  }
+  
 }
 @media screen and (min-width:1024px) and (orientation:landscape){
   .middle-section {
