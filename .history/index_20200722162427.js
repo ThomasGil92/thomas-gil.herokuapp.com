@@ -34,7 +34,7 @@ app.use('/public', express.static('public'))
 app.use(express.static(path.join('client/build')));
 
  app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/build/index.html')); // relative path
+  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html')); // relative path
 });
 
 mongoose.connection.on('error', function (error) {
