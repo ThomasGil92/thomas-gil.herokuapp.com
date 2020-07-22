@@ -16,7 +16,8 @@ const PORT = process.env.PORT || 8000
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useFindAndModify: false,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useCreateIndex: true,
 })
   .then(() => console.log('DB Connected'));
 
@@ -32,7 +33,7 @@ app.use('/api', userRouter);
 app.use('/public', express.static('public'))
 app.use(express.static('client/build'));
 
-app.get('*', (req, res) => {
+ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html')); // relative path
 });
 

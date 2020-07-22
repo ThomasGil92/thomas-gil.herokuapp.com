@@ -1,7 +1,5 @@
 import { API } from '../config'
 import { get } from 'axios';
-import Cookie from 'js-cookie'
-import { useHistory } from 'react-router-dom'
 
 
 
