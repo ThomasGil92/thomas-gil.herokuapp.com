@@ -5,13 +5,12 @@
   "main": "index.js",
   "engines": {
     "node": "12.14",
-    "npm":"6.13.4"
+    "npm": "6.13.4"
   },
   "scripts": {
     "start": "nodemon index.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
-  
   "keywords": [
     "dévelopeur",
     "web",
