@@ -45,5 +45,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://thomas-gil.herokuapp.com"
+  "proxy": "https://localhost:8000"
 }
