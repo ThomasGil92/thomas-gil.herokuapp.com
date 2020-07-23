@@ -9,24 +9,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-#cv_top {
-  top: 20px;
-  right: 20px;
-  z-index: 0 !important;
-}
 .color-custom {
   color: #210b84;
 }
-.bg-dark2 {
-  background-color: rgb(42, 42, 42, 0.5);
-}
 .bg-custom-header-mentions {
-  background-color: rgba(33, 11, 132);
-  z-index: 8 !important;
-  position: relative;
+  background-color: rgba(94, 81, 153);
 }
 .bg-custom {
-  background-color: rgb(33, 11, 132, 0.5);
+  background-color: rgb(33, 11, 132,0.5);
 }
 .middle-section {
   margin-top: 200px;
@@ -63,24 +53,24 @@ code {
 .btn-bj-outline-custom .fa-backward {
   display: none !important;
 }
-.skills-card {
-  margin-top: -60px;
+.skills-card{
+  margin-top:-60px;
   left: 50%;
-  transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
 }
-.last-work {
-  margin-top: 2850px;
+.last-work{
+  margin-top:2850px
 }
 
-@media screen and (min-width: 450px) and (orientation: landscape) {
+@media screen and (min-width:450px) and (orientation:landscape){
   .middle-section {
     margin-top: 300px;
   }
   .desktop-img {
-    top: -320px;
+    top:-320px
   }
-  .last-work {
-    margin-top: 2300px;
+  .last-work{
+    margin-top:2300px
   }
 }
 
@@ -89,33 +79,35 @@ code {
     margin-top: 350px;
   }
   .desktop-img {
-    margin-top: -150px;
+    margin-top:-150px;
     left: 10%;
   }
-  .last-work {
-    margin-top: 1200px;
+  .last-work{
+    margin-top:1200px
   }
+  
 }
 @media screen and (min-width: 1024px) {
   .middle-section {
-    margin-top: 600px !important;
+    margin-top: 600px!important;
   }
   .desktop-img {
-    margin-top: -300px !important;
+    margin-top:-300px!important;
     left: 10%;
   }
-  .last-work {
-    margin-top: 880px !important;
+  .last-work{
+    margin-top:880px!important;
   }
 }
-@media screen and (min-width: 1024px) and (orientation: landscape) {
+@media screen and (min-width:1024px) and (orientation:landscape){
   .middle-section {
     margin-top: 350px;
   }
   .desktop-img {
-    top: -250px;
+    top:-250px
   }
-  .last-work {
-    margin-top: 1100px;
+  .last-work{
+    margin-top:1100px
   }
 }
+

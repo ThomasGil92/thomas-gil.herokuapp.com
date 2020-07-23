@@ -17,7 +17,6 @@ const Footer = () => {
 
     return (
         <div
-        id="bottom"
             className="col-12 text-center pt-5 pb-5 d-flex justify-content-center"
             style={{
                 background: " linear-gradient(180deg, rgba(33,11,132,1) 0%, rgba(17,46,232,1) 100%)"
@@ -31,11 +30,10 @@ const Footer = () => {
                         <i className="far fa-envelope d-flex justify-content-center align-items-center" style={{ width: "25px", height: "25px" }}></i>
                     </Link>
                 </div>
-                <div className="col-12">
-                    <a className="btn btn-outline-light mt-2" href={"/mentions-legales#top"}>Mentions Légales</a>
-                </div>
             </div>
-
+            <div className="row justify-content-center">
+                <Link to={"/mentions-legales"}>Mentions Légales</Link>
+            </div>
         </div>
     )
 }

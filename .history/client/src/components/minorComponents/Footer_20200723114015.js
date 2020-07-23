@@ -17,7 +17,6 @@ const Footer = () => {
 
     return (
         <div
-        id="bottom"
             className="col-12 text-center pt-5 pb-5 d-flex justify-content-center"
             style={{
                 background: " linear-gradient(180deg, rgba(33,11,132,1) 0%, rgba(17,46,232,1) 100%)"
