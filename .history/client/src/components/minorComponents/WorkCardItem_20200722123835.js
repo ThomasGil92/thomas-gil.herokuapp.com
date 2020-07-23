@@ -34,13 +34,7 @@ const WorkCardItem = () => {
                         onMouseLeave={() => onMouseLeaveHandler(site)}
                         className=" rounded w-100 h-100 d-flex align-items-center justify-content-center" >
                         {hovered.isHover._id === site._id ? (
-                            <a 
-                            style={{ boxSizing: "content-box" }} 
-                            href={siteUrl} 
-                            className="btn p-0 d-block h-100 w-100 rounded"
-                            rel="noopener noreferrer nofollow"
-                            target="_blank"
-                            >
+                            <a style={{ boxSizing: "content-box" }} href={siteUrl} className="btn p-0 d-block h-100 w-100 rounded">
                                 <div className={bg + " text-center d-flex align-items-center justify-content-center  h-100 rounded "}>
 
                                     {/* <img src={logo} className="col-3" width="100%" /> */}
