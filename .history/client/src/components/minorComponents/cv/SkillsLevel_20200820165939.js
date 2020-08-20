@@ -10,14 +10,14 @@ const SkillsLevel = () => {
                 <h1 className="font-weight-bold mb-2 mt-2">Développeur web Fullstack</h1>
                 <p className="lead">React / Node / Wordpress</p>
             </div>
-            {/* <div className="col-12 col-md-7 my-5 px-5 px-md-2 mx-auto d-flex justify-content-between">
+            <div className="col-12 col-md-7 my-5 px-5 px-md-2 mx-auto d-flex justify-content-between">
                 <div className="col-6 col-md-4 align-items-center d-flex"><i className="fas text-danger fa-3x fa-long-arrow-alt-right repeat2"></i></div>
 
                 <a className="col-6 col-md-4 btn btn-outline-danger zoom-on-hover my-1" href="https://thomas-gil.herokuapp.com/img/CV_THOMAS_GIL_2020.pdf" download>
                     Télécharger le CV   <i className="fas fa-cloud-download-alt"></i>
                 </a>
                 <div className="col-3 col-md-4 text-right d-none d-md-block"><i className="fas text-danger fa-3x fa-long-arrow-alt-left repeat1"></i></div>
-            </div> */}
+            </div>
             <div className="card col-10 text-center mx-auto my-5">
                 {/* <h2>Compétences à jour</h2>
                 <CVSkills /> */}
