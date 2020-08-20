@@ -141,7 +141,7 @@ développeurs et le second est un ecommerce de livres.</p>
                         </div>
                     </div>
                     <div className="col-3 h-100">
-                        <div><img src="img/photo-thomas-gil.png"/></div>
+                        <div><img src="photo-thomas-gil.png"/></div>
                         <div className="text-left mb-5">
                             <h5>Langues</h5>
                             <ul className="list-group">
