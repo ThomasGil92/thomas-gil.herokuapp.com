@@ -227,7 +227,6 @@ développeurs et le second est un ecommerce de livres.</p>
                     <p>Si mon profil correspond à vos besoins, n'hésitez pas à me contacter pour un entretien en physique, dans vos locaux ou en visio.</p>
                     <p>Disponible pour toutes sortes de projets web, je travaille en régie ou bien en présentiel (selon conditions).</p>
                     <p>J'accepte les missions en freelance ainsi que les CDI/CDD selon le projet.</p>
-                    
                     <Link className="btn btn-bj-outline-custom rounded-pill"  /* style={isActive(history, "/")} */ to="/contact">
                         Contact  <i className="far fa-hand-spock animate__animated animate__wobble"></i>
                     </Link>
