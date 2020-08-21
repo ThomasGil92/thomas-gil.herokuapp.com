@@ -19,7 +19,7 @@ const SkillsLevel = () => {
                 </a>
                 <div className="col-3 col-md-4 text-right d-none d-md-block"><i className="fas text-danger fa-3x fa-long-arrow-alt-left repeat1"></i></div>
             </div> */}
-            <div className="card col-12 col-md-10 text-center mx-auto my-5">
+            <div className="card col-10 text-center mx-auto my-5">
                 {/* <h2>Compétences à jour</h2>
                 <CVSkills /> */}
                 <HardCv/>
