@@ -14,12 +14,12 @@ const HardCv = () => {
             <div className="row mt-4">
                 <div className="col-md-9 col-12">
                     <div className="row px-4 text-justify">
-                        <div className="col-6 d-flex align-items-center"><p><i className="fas fa-at"></i> Tgil849@gmail.com</p></div>
-                        <div className="col-6"><p><i className="fab fa-github-square"></i> ThomasGil92</p></div>
-                        <div className="col-6"><p><i className="fas fa-map-marker-alt"></i> Rueil-Malmaison (92500)</p></div>
-                        <div className="col-6">Âge: 28 ans</div>
-                        <div className="col-6"><p><i className="fas fa-phone-volume"></i> 07.62.50.70.97</p></div>
-                        <div className="col-6"><p><i className="fab fa-linkedin"></i> thomas-g-81543b162</p></div>
+                        <div className="col-12 col-md-6"><p><i className="fas fa-at"></i> Tgil849@gmail.com</p></div>
+                        <div className="col-12 col-md-6"><p><i className="fab fa-github-square"></i> ThomasGil92</p></div>
+                        <div className="col-12 col-md-6"><p><i className="fas fa-map-marker-alt"></i> Rueil-Malmaison (92500)</p></div>
+                        <div className="col-12 col-md-6">Âge: 28 ans</div>
+                        <div className="col-12 col-md-6"><p><i className="fas fa-phone-volume"></i> 07.62.50.70.97</p></div>
+                        <div className="col-12 col-md-6"><p><i className="fab fa-linkedin"></i> thomas-g-81543b162</p></div>
                     </div>
                     <div className="row text-left mt-5">
                         <div className="col-12">
