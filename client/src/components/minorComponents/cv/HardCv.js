@@ -2,7 +2,7 @@ import React,{Fragment} from 'react'
 
 const HardCv = () => {
     return (
-        <Fragment>
+        <div style={{color:"#515050"}}>
             <header>
                 <div className="row">
                     <div className="col-12">
@@ -13,13 +13,13 @@ const HardCv = () => {
             </header>
             <div className="row mt-4">
                 <div className="col-md-9 col-12">
-                    <div className="row text-justify">
-                        <div className="col-6">Tgil849@gmail.com</div>
-                        <div className="col-6">ThomasGil92</div>
-                        <div className="col-6">Rueil-Malmaison (92500)</div>
+                    <div className="row px-4 text-justify">
+                        <div className="col-6 d-flex align-items-center"><p><i className="fas fa-at"></i> Tgil849@gmail.com</p></div>
+                        <div className="col-6"><p><i className="fab fa-github-square"></i> ThomasGil92</p></div>
+                        <div className="col-6"><p><i className="fas fa-map-marker-alt"></i> Rueil-Malmaison (92500)</p></div>
                         <div className="col-6">Âge: 28 ans</div>
-                        <div className="col-6">07.62.50.70.97</div>
-                        <div className="col-6">thomas-g-81543b162</div>
+                        <div className="col-6"><p><i className="fas fa-phone-volume"></i> 07.62.50.70.97</p></div>
+                        <div className="col-6"><p><i className="fab fa-linkedin"></i> thomas-g-81543b162</p></div>
                     </div>
                     <div className="row text-left mt-5">
                         <div className="col-12">
@@ -27,19 +27,23 @@ const HardCv = () => {
                             <div className="text-justify bg-light py-2 px-4 mb-1">
                                 <h4>Juillet-Aout 2020</h4>
                                 <p>Développement d'une application de gestion de projet qui permet de suivre selon le projet séléctionné, quelles tâches il reste à effectuer, combien de temps il reste avant livraison du projet, ...</p>
+                                <br/>
                                 <p><u>Technologies utilisées</u>: React, Node, Redux, MongoDB, Bootstrap/React-bootstrap.</p>
-                                <span>(En développement)</span>
+                                <h6>Lien:</h6>
+                                <p><a href="https://fokjlenot.herokuapp.com" rel="target_blank">Fokjlenot.herokuapp.com</a></p>
                             </div>
                             <div className="text-justify bg-light py-2 px-4 mb-1">
                                 <h4>Juin-Juillet 2020</h4>
-                                <p>Développement de mon portfolio en ligne. Création d’une page d’administration avec identification par token pour enregistrer les sites que j’ai créé sous forme de post affiché dynamiquement sur la page d’accueil. “”
-                  <br /><a href="https:/thomas-gil.fr" rel="target_blank">Thomas-gil.fr</a></p>
-                                <p><u>Technologies utilisées</u>: React, Node, Redux, Express.Js, MongoDB.</p>
+                                <p>Développement de mon portfolio en ligne. Création d’une page d’administration avec identification par token pour enregistrer les sites que j’ai créé sous forme de post affiché dynamiquement sur la page d’accueil.</p>
+                  <br />
+                                    <p><u>Technologies utilisées</u>: React, Node, Redux, Express.Js, MongoDB.</p>
+                                    <h6>Lien:</h6>
+                                    <p><a href="https://thomas-gil.fr" rel="target_blank">Thomas-gil.fr</a></p>
                             </div>
                             <div className="text-justify bg-light py-2 px-4 mb-1">
                                 <h4>Avril-Mai 2020</h4>
                                 <p>Développement d’un site Wordpress pour un cabinet de pédicures-podologues, SEO, webdesign, personalisation du thème, respect des consignes de l’ordre national des pédicures-podologues en matière de sites internet.
-                  <br /><a href="https://podologues-des-bruyeres.fr/" rel="target_blank">Podologues-des-bruyère.fr</a></p>
+                  <br /><a href="https://podologues-des-bruyeres.fr/" rel="target_blank">Podologues-des-bruyères.fr</a></p>
                                 <p><u>Technologies utilisées</u>: Wordpress, Photoshop, utilisation de "Page Builder", YoastSEO, ...</p>
                             </div>
                             <div className="text-justify bg-light py-2 px-4 mb-1">
@@ -123,7 +127,9 @@ développeurs et le second est un ecommerce de livres.</p>
                     </div>
                 </div>
                 <div className="col-md-3 col-12 h-100">
-                    <div className="col-md-12 col-6 mt-2 mt-md-0 mx-auto"><img className="rounded-circle" src="img/photo-thomas-gil.png" width="100%" /></div>
+                    <div className="col-md-12 col-6 mt-2 mt-md-0 mx-auto">
+                        <img className="rounded-circle" src="img/photo-thomas-gil.png" width="100%" />
+                        </div>
                     <div className="text-left mt-md-5 mt-2 mb-5">
                         <h5>Langues</h5>
                         <ul className="list-group">
@@ -202,7 +208,7 @@ développeurs et le second est un ecommerce de livres.</p>
 
                 </div>
             </div>
-        </Fragment>
+        </div>
     )
 }
 export default HardCv
