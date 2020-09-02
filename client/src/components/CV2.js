@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 
 const CV2 = () => {
     return (
-        <div style={{color:"#515050"}}>
+        <div className="container-fluid" style={{color:"#515050"}}>
             <header>
                 <div className="row">
                     <div className="col-12">
