@@ -10,7 +10,7 @@ const Footer = () => {
             rel="target_blank"
                 className="btn btn-outline-light rounded-circle m-2 p-3"
                 href={link}><i className={fa + " d-flex justify-content-center align-items-center"}
-                    style={{ width: "25px", height: "25px" }}>.</i></a>
+                    style={{ width: "25px", height: "25px" }}></i></a>
 
         )
     }
