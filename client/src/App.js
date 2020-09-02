@@ -17,6 +17,7 @@ function App() {
       <Route exact path="/contact" component={Contact} />     
       <Route exact path="/signin" component={Signin} /> 
       <Route exact path="/mentions-legales" component={MentionsLegales} /> 
+      
       <AdminRoute/>    
     </Switch>
     </Router>
