@@ -6,7 +6,7 @@ const CV2 = () => {
         <div className="container-fluid" style={{color:"#515050"}}>
             <header>
                 <div className="row">
-                    <div className="col-12 mx-auto">
+                    <div className="col-12 text-center">
                         <h1 className="mb-0">Thomas Gil-Escriche</h1>
                         <span>Développeur web Fullstack</span>
                     </div>
