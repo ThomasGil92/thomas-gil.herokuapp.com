@@ -15,7 +15,7 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk
 store.dispatch(getSites()); 
 store.dispatch(setUser()); 
 if(sessionStorage.getItem('lang')){
-  store.dispatch(setLang(sessionStorage.getItem('lang')))
+  store.dispatch(setLang(sessionStorage.getItem('lang').value))
 }
 
 
