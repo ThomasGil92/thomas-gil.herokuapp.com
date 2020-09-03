@@ -158,7 +158,7 @@ développeurs et le second est un ecommerce de livres.</p>
                     </div>
                     <div className="text-left comp">
                         <h5>Compétences</h5>
-                        <div className="bg-light px-3 pb-3 rounded">
+                        <div className="bg-light px-3 pb-3 border rounded">
                             <span>HTML</span>
                             <div className="progress mb-2">
                                 <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style={{ width: "90%" }}></div>
