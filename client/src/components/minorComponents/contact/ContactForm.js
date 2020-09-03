@@ -47,7 +47,7 @@ const ContactForm = () => {
                         <div className="inp-name">
                             <label htmlFor="user_name" className="lead">Votre nom</label>
                             <input
-                                className="inp-anim"
+                                className="inp-anim w-100"
                                 type="text"
                                 name="userName"
                                 id="user_name"
@@ -59,9 +59,9 @@ const ContactForm = () => {
                         </div>
 
                         <div className="inp-email">
-                            <label htmlFor="user_email" className="lead">Votre adresse email:</label>
+                            <label htmlFor="user_email" className="lead">Votre adresse email</label>
                             <input
-                                className="inp-anim"
+                                className="inp-anim w-100"
                                 type="email"
                                 name="userEmail"
                                 required
@@ -70,9 +70,9 @@ const ContactForm = () => {
                                 maxLength="40" />
                         </div>
                         <div className="inp-message">
-                            <label htmlFor="message" className="lead">Votre message:</label>
+                            <label htmlFor="message" className="lead">Votre message</label>
                             <textarea
-                                className="inp-anim"
+                                className="inp-anim w-100"
                                 name="message"
                                 id="message"
                                 onChange={handleChange}
