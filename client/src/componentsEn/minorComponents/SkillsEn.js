@@ -27,7 +27,7 @@ const SkillsEn = () => {
                     <img width="100px" src="./img/47.png" alt="logo backend" />
                     <h4 className="font-weight-bolder">Backend Developer</h4>
                     <p className="pt-4 px-md-3 px-0 ">
-                        Thanks to the backend, i can develop much richer applications by creating an API, which allows me to store and receive data in real time.
+                        Thanks to the backend, I can develop much richer applications by creating an API, which allows me to store and receive data in real time.
                             </p>
                     <h4 className="color-custom mt-5">Mastered technologies:</h4>
                     <p className="lead">Node.js, Express.js</p>

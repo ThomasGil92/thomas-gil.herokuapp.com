@@ -17,7 +17,7 @@ const LaptopAndSkillsEn = () => {
             <div className="col-12 col-md-6 my-5  px-2 px-md-0 text-white mx-auto">
                 <h3>Hello, i'm Thomas. <br />Glad to meet you.</h3>
                 <p className="px-3 text-justify text-center ">
-Since the start of my developer journey (two years ago), i have not stopped evolving and learning new technologies to offer you a service and quality products. Adaptation and availability are my priorities in order to meet your expectations precisely.</p>
+Since the start of my developer journey (two years ago), I have not stopped evolving and learning new technologies to offer you a service and quality products. Adaptation and availability are my priorities in order to meet your expectations precisely.</p>
             </div>
 
 

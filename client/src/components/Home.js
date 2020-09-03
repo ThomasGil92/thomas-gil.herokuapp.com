@@ -17,7 +17,12 @@ import Alert from './minorComponents/layout/alert';
 const Home = () => {
 
   const language = useSelector(state => state.language);
-
+if(language==="fr"){
+        document.title = "Développeur React/Node";
+    }
+    if(language==="en"){
+        document.title="React/Node Developer"
+    }
 
   return (
     <div className="container-fluid px-0">

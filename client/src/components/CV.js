@@ -10,7 +10,13 @@ import {useSelector} from 'react-redux'
 
 const CV = () => {
     const language = useSelector(state => state.language);
-    document.title = "Espace recruteur";
+    if(language==="fr"){
+        document.title = "Espace recruteur";
+    }
+    if(language==="en"){
+        document.title="Recruiters area"
+    }
+    
     return (
         <Fragment>
             
