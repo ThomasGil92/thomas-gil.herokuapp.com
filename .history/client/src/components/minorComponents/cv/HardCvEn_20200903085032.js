@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 
 const HardCvEn = () => {
     return (
-        <div className="py-4" style={{ color: "#515050" }}>
+        <div className="py-2" style={{ color: "#515050" }}>
             <header>
                 <div className="row">
                     <div className="col-12">
