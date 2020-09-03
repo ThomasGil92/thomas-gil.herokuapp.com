@@ -97,6 +97,68 @@ code {
   }
 }
 @media screen and (min-width: 1024px) {
+  /* Formulaire de contact pour desktop */
+.inp-anim {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 10px;
+  font-size: 25px;
+  transition: border 0.2s ease-out;
+}
+.inp-name label {
+  font-size: 25px;
+  position: absolute;
+  color: #333;
+  top: 35px;
+  transform: translateY(-50%);
+  padding-left: 8px;
+  transition: all 0.3s ease-out;
+}
+.inp-email {
+  margin-top: 50px;
+}
+.inp-message {
+  margin-top: 50px;
+}
+.inp-email label {
+  font-size: 25px;
+  position: absolute;
+  color: #333;
+  top: 155px;
+  transform: translateY(-50%);
+  padding-left: 8px;
+  transition: all 0.3s ease-out;
+}
+.inp-message label {
+  font-size: 25px;
+  position: absolute;
+  color: #333;
+  top: 270px;
+  transform: translateY(-50%);
+  padding-left: 8px;
+  transition: all 0.3s ease-out;
+}
+.inp-name:focus-within label,
+.inp-name.active-input label {
+  top: -24px;
+  padding-left: 2px;
+}
+
+.inp-email:focus-within label,
+.inp-email.active-input label {
+  top: 95px;
+  padding-left: 2px;
+}
+.inp-message:focus-within label,
+.inp-message.active-input label {
+  top: 210px;
+  padding-left: 2px;
+}
+.border-danger {
+  border: 1px solid red;
+}
   .middle-section {
     margin-top: 600px !important;
   }
