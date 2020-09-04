@@ -17,7 +17,7 @@ const HardCv = () => {
                         <div className="col-12 mx-auto mx-md-0 col-md-6"><p><i className="fas fa-at"></i> Tgil849@gmail.com</p></div>
                         <div className="col-12 mx-auto mx-md-0 col-md-6"><p><i className="fab fa-github-square"></i> ThomasGil92</p></div>
                         <div className="col-12 mx-auto mx-md-0 col-md-6"><p><i className="fas fa-map-marker-alt"></i> Rueil-Malmaison (92500)</p></div>
-                        <div className="col-12 mx-auto mx-md-0 col-md-6 mb-3 mb-md-0">Âge: 29 ans</div>
+                        <div className="col-12 mx-auto mx-md-0 col-md-6 mb-3 mb-md-0"><p>Age: 29 ans</p></div>
                         <div className="col-12 mx-auto mx-md-0 col-md-6"><p><i className="fas fa-phone-volume"></i> 07.62.50.70.97</p></div>
                         <div className="col-12 mx-auto mx-md-0 col-md-6"><p><i className="fab fa-linkedin"></i> thomas-g-81543b162</p></div>
                     </div>
