@@ -189,9 +189,7 @@ code {
   .desktop-img {
     top: -150px;
   }
-  .last-work {
-    margin-top: 1100px;
-  }
+  
 }
 @media screen and (min-width: 1200px) {
   .desktop-img {
@@ -237,6 +235,9 @@ code {
 @media screen and (min-width: 1750px) {
   .desktop-img {
     top: -500px;
+  }
+  .last-work {
+    margin-top: 1150px!important;
   }
   .middle-section {
     margin-top: 750px !important;
