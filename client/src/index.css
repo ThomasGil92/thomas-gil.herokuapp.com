@@ -29,10 +29,10 @@ code {
   background-color: rgb(33, 11, 132, 0.5);
 }
 .middle-section {
-  margin-top: 200px;
+  margin-top: 150px;
 }
 .desktop-img {
-  top: -150px;
+  top: -120px;
   left: 0;
 }
 .btn-bj-outline-custom {
@@ -89,7 +89,6 @@ code {
     margin-top: 350px;
   }
   .desktop-img {
-    margin-top: -150px;
     left: 10%;
   }
   .last-work {
@@ -98,67 +97,67 @@ code {
 }
 @media screen and (min-width: 1024px) {
   /* Formulaire de contact pour desktop */
-.inp-anim {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid black;
-  outline: none;
-  border-radius: 10px;
-  font-size: 25px;
-  transition: border 0.2s ease-out;
-}
-.inp-name label {
-  font-size: 25px;
-  position: absolute;
-  color: #333;
-  top: 35px;
-  transform: translateY(-50%);
-  padding-left: 8px;
-  transition: all 0.3s ease-out;
-}
-.inp-email {
-  margin-top: 50px;
-}
-.inp-message {
-  margin-top: 50px;
-}
-.inp-email label {
-  font-size: 25px;
-  position: absolute;
-  color: #333;
-  top: 155px;
-  transform: translateY(-50%);
-  padding-left: 8px;
-  transition: all 0.3s ease-out;
-}
-.inp-message label {
-  font-size: 25px;
-  position: absolute;
-  color: #333;
-  top: 270px;
-  transform: translateY(-50%);
-  padding-left: 8px;
-  transition: all 0.3s ease-out;
-}
-.inp-name:focus-within label,
-.inp-name.active-input label {
-  top: -24px;
-  padding-left: 2px;
-}
+  .inp-anim {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 10px;
+    font-size: 25px;
+    transition: border 0.2s ease-out;
+  }
+  .inp-name label {
+    font-size: 25px;
+    position: absolute;
+    color: #333;
+    top: 35px;
+    transform: translateY(-50%);
+    padding-left: 8px;
+    transition: all 0.3s ease-out;
+  }
+  .inp-email {
+    margin-top: 50px;
+  }
+  .inp-message {
+    margin-top: 50px;
+  }
+  .inp-email label {
+    font-size: 25px;
+    position: absolute;
+    color: #333;
+    top: 155px;
+    transform: translateY(-50%);
+    padding-left: 8px;
+    transition: all 0.3s ease-out;
+  }
+  .inp-message label {
+    font-size: 25px;
+    position: absolute;
+    color: #333;
+    top: 270px;
+    transform: translateY(-50%);
+    padding-left: 8px;
+    transition: all 0.3s ease-out;
+  }
+  .inp-name:focus-within label,
+  .inp-name.active-input label {
+    top: -24px;
+    padding-left: 2px;
+  }
 
-.inp-email:focus-within label,
-.inp-email.active-input label {
-  top: 95px;
-  padding-left: 2px;
-}
-.inp-message:focus-within label,
-.inp-message.active-input label {
-  top: 210px;
-  padding-left: 2px;
-}
-.border-danger {
-  border: 1px solid red;
-}
+  .inp-email:focus-within label,
+  .inp-email.active-input label {
+    top: 95px;
+    padding-left: 2px;
+  }
+  .inp-message:focus-within label,
+  .inp-message.active-input label {
+    top: 210px;
+    padding-left: 2px;
+  }
+  .border-danger {
+    border: 1px solid red;
+  }
   .middle-section {
     margin-top: 600px !important;
   }
@@ -170,14 +169,126 @@ code {
     margin-top: 880px !important;
   }
 }
-@media screen and (min-width: 1024px) and (orientation: landscape) {
+#top #enFlag,
+#frFlag {
+  width: 30px;
+  height: 30px;
+}
+#logo {
+  width: 50px;
+}
+@media screen and (min-width: 900px) {
+  .desktop-img {
+    top: -350px;
+  }
+}
+@media screen and (min-width: 1024px) {
   .middle-section {
-    margin-top: 350px;
+    margin-top: 400px !important;
   }
   .desktop-img {
-    top: -250px;
+    top: -150px;
   }
   .last-work {
     margin-top: 1100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .desktop-img {
+    top: -230px;
+  }
+  .middle-section {
+    margin-top: 500px !important;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #logo {
+    width: 60px;
+  }
+  #top .btn {
+    font-size: 1.3rem;
+  }
+  #top #enFlag,
+  #frFlag {
+    width: 50px;
+    height: 50px;
+  }
+  #homeHeader h1 {
+    font-size: 3em;
+  }
+  #homeHeader p {
+    font-size: 2em;
+  }
+  .desktop-img {
+    top: -280px;
+  }
+  .middle-section {
+    margin-top: 550px !important;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .desktop-img {
+    top: -400px;
+  }
+  .middle-section {
+    margin-top: 650px !important;
+  }
+}
+@media screen and (min-width: 1750px) {
+  .desktop-img {
+    top: -500px;
+  }
+  .middle-section {
+    margin-top: 750px !important;
+  }
+  p {
+    font-size: 1.9em;
+  }
+  h3 {
+    font-size: 3em;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .desktop-img {
+    top: -600px;
+  }
+  .middle-section img {
+    width: 80%;
+  }
+  .middle-section {
+    margin-top: 800px !important;
+  }
+  #top .btn {
+    font-size: 1.9rem;
+  }
+  #logo {
+    width: 90px;
+  }
+  #top #enFlag,
+  #frFlag {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (min-width: 2250px) {
+  .middle-section {
+    margin-top: 900px !important;
+  }
+  .desktop-img {
+    top: -700px;
+  }
+}
+@media screen and (min-width: 2500px) {
+  #top .btn {
+    font-size: 2.2rem;
+  }
+  #logo {
+    width: 100px;
+  }
+  .middle-section {
+    margin-top: 1000px !important;
+  }
+  .desktop-img {
+    top: -800px;
   }
 }

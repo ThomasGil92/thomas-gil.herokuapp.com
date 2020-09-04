@@ -15,9 +15,9 @@ const Menu = () => {
     }
 
     return (
-        <nav id="top" className="container navbar navbar-expand-lg navbar-white bg-white my-md-4" >
+        <nav id="top" className="navbar navbar-expand-lg navbar-white bg-white mx-auto my-md-4" style={{width:"80%"}}>
             <Link className="navbar-brand col-2 px-0" to={"/"}>
-                <img src="./img/Groupe_1.png" width="50px" alt="Logo" loading="lazy" />
+                <img src="./img/Groupe_1.png"  alt="Logo" id="logo" />
             </Link>
             <ul className="navbar-nav ml-auto">
                 
@@ -36,9 +36,8 @@ const Menu = () => {
                         <button
                             className="btn rounded-circle"
                             name="en"
+                            id="enFlag"
                             style={{
-                                height: "30px",
-                                width: "30px",
                                 backgroundPosition: "center",
                                 backgroundSize: "cover",
                                 backgroundImage: `url("https://thomas-gil.herokuapp.com/img/uk.png")`

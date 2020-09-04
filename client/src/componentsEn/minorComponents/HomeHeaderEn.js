@@ -6,7 +6,7 @@ const HomeHeaderEn = () => {
     return (
         <Fragment>
             
-            <div className="text-center py-3 text-dark">
+            <div id="homeHeader" className="text-center py-3 text-dark">
                 <h1 className="font-weight-bold mb-2 mt-2">Fullstack web developer</h1>
                 <p className="lead">React / Node / Wordpress</p>
             </div>

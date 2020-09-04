@@ -8,10 +8,8 @@ const LaptopAndSkillsEn = () => {
                 background: " linear-gradient(180deg, rgba(33,11,132,1) 0%, rgba(17,46,232,1) 100%)"
             }}>
             <img
-                className="col-12 col-md-10 mx-auto w-100 position-absolute desktop-img"
-
+                className="col-12 col-md-10 mx-auto mx-auto position-absolute desktop-img"
                 alt="laptop"
-                width="100%"
                 src="./img/laptop-img-presta.png"
             />
             <div className="col-12 col-md-6 my-5  px-2 px-md-0 text-white mx-auto">
