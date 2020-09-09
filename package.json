@@ -8,6 +8,7 @@
     "npm": "6.13.4"
   },
   "scripts": {
+    "test": "cd client && npm test",
     "start": "nodemon index.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
