@@ -7,9 +7,9 @@ const Alert = () => {
     const alerts = useSelector(function (state) { return state.alert });
 
     return (
-        alerts.length ? (alerts.map((alert,i) => {
+        alerts.length ? (alerts.map((alert) => {
             return (
-                <div key={i} className={`alert my-3 col-6 mx-auto alert-${alert.alertType}`}>
+                <div key={alert._id} className={`alert mt-md-3 alert-${alert.alertType}`}>
                     <p className="lead text-dark m-0 text-center" >{alert.msg}</p>
                 </div>
             )

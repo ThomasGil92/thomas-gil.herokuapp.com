@@ -21,7 +21,7 @@ exports.read = (req, res) => {
 exports.create = (req, res) => {
     console.log(req.body.title)
     const reqFiles = [];
-    const url = 'https://' + req.get('host')
+    const url = req.protocol + '://' + req.get('host')
     for (var i = 0; i < req.files.length; i++) {
         reqFiles.push(url + '/public/' + req.files[i].filename)
     }

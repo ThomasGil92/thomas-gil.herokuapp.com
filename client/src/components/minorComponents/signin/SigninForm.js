@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { getUser, setUser, setAlert, authenticate } from '../../../actions';
-import { useHistory, Redirect } from "react-router-dom";
-import Alert from '../layout/alert'
+import { getUser, setUser } from '../../../actions';
+import { useHistory } from "react-router-dom";
 
 
 const SigninForm = (props) => {
@@ -13,7 +12,7 @@ const SigninForm = (props) => {
         loading: false,
         redirectToReferrer: false,
     });
-    const { email, password } = values;
+    const { email, password, error, loading, redirectToReferrer } = values;
     const user = useSelector(state => state.user);
     const history = useHistory();
     const dispatch = useDispatch();
@@ -26,44 +25,28 @@ const SigninForm = (props) => {
         setValues({ ...values, error: false, loading: true });
         getUser({ email, password })
             .then(data => {
-                if (data.err) {
-                    dispatch(setAlert("Une erreur est survenue", "danger"))
-                } else {
-                    authenticate(data, () => {
-                        dispatch(setUser());
-                        history.push("/admin-dashboard")
-                        dispatch(setAlert("Vous êtes connécté", "info"))
-                    })
-                }
-            }
+                dispatch(setUser());
+                history.push("/")
+            })
 
-            )
     };
-
-    if (!user.token) {
-        return (
-            <form>
-                <div className="form-group">
-                    <label className="text-muted">
-                        Email
+    return (
+        <form>
+            <div className="form-group">
+                <label className="text-muted">
+                    Email
                 </label>
-                    <input value={email} onChange={handleChange('email')} type="email" className="form-control" />
-                </div>
-                <div className="form-group">
-                    <label className="text-muted">
-                        Password
+                <input value={email} onChange={handleChange('email')} type="email" className="form-control" />
+            </div>
+            <div className="form-group">
+                <label className="text-muted">
+                    Password
                 </label>
-                    <input value={password} onChange={handleChange('password')} type="password" className="form-control" />
-                </div>
-                <Alert msg="Les données saisies doivent être inccorectes" alertType="danger" />
-                <button onClick={clickSubmit} className="btn btn-primary">Submit</button>
-            </form>
-        )
-    } else {
-        return (
-            <Redirect to={"/admin-dashboard"} />
-        )
-    }
+                <input value={password} onChange={handleChange('password')} type="password" className="form-control" />
+            </div>
+            <button onClick={clickSubmit} className="btn btn-primary">Submit</button>
+        </form>
+    )
 }
 
 export default SigninForm

@@ -6,6 +6,7 @@ import Footer from './minorComponents/Footer'
 import Cookie from './minorComponents/Cookie'
 
 const Signin = () => {
+    document.title = "Connexion";
     return (
         <Fragment>
             <Menu />

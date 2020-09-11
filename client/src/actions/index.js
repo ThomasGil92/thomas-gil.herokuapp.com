@@ -1,5 +1,7 @@
 import { API } from '../config'
 import { get } from 'axios';
+import Cookie from 'js-cookie'
+import {useHistory} from 'react-router-dom'
 
 
 
@@ -12,14 +14,7 @@ export const SET_USER = 'SET_USER';
 export const NEW_PUBLIC_SITE = 'NEW_PUBLIC_SITE';
 export const SET_NEW_SITE = 'SET_NEW_SITE';
 export const CLEAR_TO_UPDATE_SITE = 'CLEAR_TO_UPDATE_SITE';
-export const SET_LANGUAGES="SET_LANGUAGES"
 
-export function setLang(selectedLanguage) {
-    return function (dispatch) {
-  
-      dispatch({ type: SET_LANGUAGES, language: selectedLanguage })
-    };
-  };
 
 export function getSites() {
   return function (dispatch) {
@@ -30,14 +25,14 @@ export function getSites() {
       .catch(function (error) { console.log('error', error); });
   };
 };
-export function setAlert(msg, alertType, timeout = 5000) {
+export function setAlert(msg, alertType,timeout=5000) {
   return function (dispatch) {
-
+    
     dispatch({
       type: SET_ALERT,
       payload: { msg, alertType }
     })
-    setTimeout(() => dispatch({ type: REMOVE_ALERT }), timeout)
+    setTimeout(()=>dispatch({type:REMOVE_ALERT}),timeout)
   }
 }
 export function getSite(siteId) {
@@ -66,26 +61,18 @@ export const getUser = (user) => {
     },
     body: JSON.stringify(user)
   })
+    .then(response => {
+      return response.json();
+    })
     .then(data => {
-      if(data.err){
-        return data.err
+      if (!data.error) {
+        localStorage.setItem('jwt', JSON.stringify(data));
+        /* Cookie.set('j',JSON.stringify(data)) */
       }
-      if(!data.err)
-      return data.json();
     })
     .catch(err => {
       console.log(err);
     });
-}
-
-export const authenticate = (data,next) => {
-  if (!data.err) {
-    localStorage.setItem('jwt', JSON.stringify(data));
-    next()
-  }
-  if(data.err){
-    console.log(data.err)
-  }
 }
 
 export function setUser() {

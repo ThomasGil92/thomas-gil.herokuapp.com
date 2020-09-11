@@ -5,7 +5,6 @@ import user from './userReducer';
 import newSite from './newSiteReducer';
 import siteToUpdate from './siteReducer';
 import alert from './alertReducer';
-import language from './languageReducer';
 
 export default combineReducers({
   sites: sites,
@@ -13,7 +12,6 @@ export default combineReducers({
   user:user,
   newSite:newSite,
   siteToUpdate:siteToUpdate,
-  alert,
-  language:language
+  alert
   
 });

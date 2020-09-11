@@ -3,9 +3,9 @@ import React from 'react'
 
 const Skills = () => {
     return (
-        <div className="card col-10 mx-auto shadow position-absolute skills-card">
+        <div className="card col-10 mx-auto mt-5 shadow skills-card">
             <div className="row text-center">
-                <div className="col-10 col-md-4 px-0 px-md-2 mx-auto py-3 border-md-right">
+                <div className="col-10 col-md-4 px-0 px-md-2 mx-auto py-3 border-right">
                     <img width="100px" src="./img/48.png" alt="logo front-end" />
                     <h4 className="font-weight-bolder">Développeur Front-End</h4>
                     <p className="pt-4 px-md-3 px-0">
@@ -23,7 +23,7 @@ const Skills = () => {
                         <li className="list-group-item  border-0 py-1 lead">Desktop</li>
                     </ul>
                 </div>
-                <div className="col-10 col-md-4 px-0 px-md-2 mx-auto py-3 border-md-right">
+                <div className="col-10 col-md-4 px-0 px-md-2 mx-auto py-3 border-right">
                     <img width="100px" src="./img/47.png" alt="logo backend" />
                     <h4 className="font-weight-bolder">Développeur Back-End</h4>
                     <p className="pt-4 px-md-3 px-0 ">

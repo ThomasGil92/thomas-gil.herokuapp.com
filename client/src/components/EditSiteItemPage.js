@@ -73,7 +73,7 @@ const EditSiteItemPage = ({ match }) => {
         <div className="container-fluid px-0 text-center mx-auto justify-content-center">
             {site && siteToUpdate && (
                 <div>
-                    <h1>Modifiez les informations du site {siteToUpdate.title}</h1>
+                    <h1>Modifier les informations du site {siteToUpdate.title}</h1>
                     <div className="col-6 mx-auto">
                         {siteToUpdate.imgCollection && (
                             <img width="300px" alt={siteToUpdate.title} src={siteToUpdate.imgCollection[0]} />

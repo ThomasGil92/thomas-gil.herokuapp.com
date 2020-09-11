@@ -15,7 +15,7 @@ export const AdminRoute = () => {
         )
     } else {
         return (
-            <Redirect to={"/Signin"} />
+            <Redirect to={"/signin"} />
         )
     }
 };

@@ -8,15 +8,12 @@ import logger from 'redux-logger'
 import { Provider,useSelector } from 'react-redux';
 import rootReducer from './reducers';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { getSites,setUser,setLang } from './actions'; 
+import { getSites,setUser } from './actions'; 
 const invariant=require('redux-immutable-state-invariant').default()
 
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk, logger,invariant)));
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk, logger)));
 store.dispatch(getSites()); 
 store.dispatch(setUser()); 
-if(sessionStorage.getItem('lang')){
-  store.dispatch(setLang(sessionStorage.getItem('lang')))
-}
 
 
 ReactDOM.render(

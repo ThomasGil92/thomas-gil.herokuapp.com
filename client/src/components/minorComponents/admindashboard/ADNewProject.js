@@ -77,7 +77,7 @@ const ADNewProject = () => {
 
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <input type="text" name="title" required enctype="multipart/form-data" value={title} onChange={handleChange} className="form-control" placeholder="Title" />
+                    <input type="text" name="title" required value={title} onChange={handleChange} className="form-control" placeholder="Title" />
                 </div>
                 <div className="form-group">
                     <input type="text" name="url" required value={url} onChange={handleChange} className="form-control" placeholder="url" />
