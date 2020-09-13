@@ -1,0 +1,44 @@
+{
+  "name": "tgillike",
+  "version": "1.0.0",
+  "description": "Site  de développeur web en MERN stack + redux",
+  "main": "index.js",
+  "engines": {
+    "node": "12.14",
+    "npm": "6.13.4"
+  },
+  "scripts": {
+    "start": "nodemon index.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "keywords": [
+    "dévelopeur",
+    "web",
+    "react",
+    "node.js",
+    "express.js",
+    "mongodb",
+    "redux"
+  ],
+  "author": "Thomas Gil",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "concurrently": "^5.3.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "express-validator": "^5.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.20",
+    "moment": "^2.27.0",
+    "mongoose": "^5.10.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.2",
+    "uuidv4": "^6.2.3"
+  }
+}
