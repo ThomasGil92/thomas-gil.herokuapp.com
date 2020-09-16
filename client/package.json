@@ -29,7 +29,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage --watchAll",
+    "test": "react-scripts test  --watchAll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -51,7 +51,13 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.4"
   },
-  "babel":{
-    "plugins":"@babel/plugin-transform-react-jsx"
+  "presets": [
+    "preset-react"
+  ],
+  "babel": {
+    "plugins": [
+      "@babel/plugin-transform-react-jsx",
+      "@babel/plugin-syntax-jsx"
+    ]
   }
 }

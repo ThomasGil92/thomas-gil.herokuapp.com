@@ -47,9 +47,7 @@ const ADNewProject = () => {
 
     function handleSubmit(event) {
         event.preventDefault();
-        for (const key of Object.keys(imgCollection)) {
-            formData.append('imgCollection', imgCollection[key])
-        }
+            formData.append('imgCollection', imgCollection)
         postSite(user.user._id, user.token, formData)
             .then(function (response) {
                 console.log(response)
@@ -77,7 +75,7 @@ const ADNewProject = () => {
 
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <input type="text" name="title" required enctype="multipart/form-data" value={title} onChange={handleChange} className="form-control" placeholder="Title" />
+                    <input type="text" name="title" required value={title} onChange={handleChange} className="form-control" placeholder="Title" />
                 </div>
                 <div className="form-group">
                     <input type="text" name="url" required value={url} onChange={handleChange} className="form-control" placeholder="url" />
@@ -92,7 +90,7 @@ const ADNewProject = () => {
                     <textarea name="description" rows="5" required value={description} onChange={handleChange} className="form-control" placeholder="Description" />
                 </div>
                 <div className="form-group">
-                    <input type="file" id="multer-file" name="imgCollection" onChange={handleChangeFiles} multiple />
+                    <input type="file" id="multer-file" name="imgCollection" enctype="multipart/form-data"  onChange={handleChangeFiles} multiple />
                 </div>
                 <div className="btn-group">
                     <input type="submit" value="Submit" className="btn btn-primary" />
