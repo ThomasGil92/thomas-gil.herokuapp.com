@@ -93,7 +93,7 @@ const ADNewProject = () => {
                     <input type="file" id="multer-file" name="imgCollection" enctype="multipart/form-data"  onChange={handleChangeFiles} multiple />
                 </div>
                 <div className="btn-group">
-                    <input type="submit" value="Submit" className="btn btn-primary" />
+                    <input type="submit" value="Submi" className="btn btn-primary" />
                 </div>
             </form>
         </div>
