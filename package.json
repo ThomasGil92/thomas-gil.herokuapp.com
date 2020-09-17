@@ -8,7 +8,7 @@
     "npm": "6.13.4"
   },
   "scripts": {
-    "start": " nodemon src/index.js",
+    "start": " nodemon index.js",
     "dev": "env-cmd -f ./config/dev.env nodemon ./src/index.js",
     "test": "env-cmd -f ./config/test.env jest --runInBand --watchAll",
     "heroku-postbuild": "cd client && npm install && npm run build"
