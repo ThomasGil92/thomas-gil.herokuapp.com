@@ -183,6 +183,10 @@ développeurs et le second est un ecommerce de livres.</p>
                             <div className="progress mb-2">
                                 <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style={{ width: "70%" }}></div>
                             </div>
+                            <span>TDD</span>
+                            <div className="progress mb-2">
+                                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style={{ width: "40%" }}></div>
+                            </div>
                             <span>Bootstrap</span>
                             <div className="progress mb-2">
                                 <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style={{ width: "90%" }}></div>
