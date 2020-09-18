@@ -6,7 +6,7 @@ exports.siteById = (req, res, next, id) => {
         .exec((err, site) => {
             if (err || !site) {
                 return res.status(400).json({
-                    error: 'site not found'
+                    error: 'Site not found'
                 });
             }
             req.site = site;
@@ -24,7 +24,7 @@ exports.create = (req, res) => {
 
     const newSite = new Site({
         _id: new mongoose.Types.ObjectId(),
-        imgCollection: req.file.fileName,
+        imgCollection: req.file.filename,
         title: req.body.title,
         description: req.body.description,
         url: req.body.url,
@@ -38,7 +38,6 @@ exports.create = (req, res) => {
         res.status(201).json(result)
 
     }).catch(err => {
-        console.log(err),
             res.status(500).json({
                 error: err
             });
@@ -63,15 +62,11 @@ exports.list = (req, res, next) => {
     next();
 }; */
 exports.update = (req, res) => {
-    const reqFiles = [];
-    const url = req.protocol + '://' + req.get('host')
-    for (var i = 0; i < req.files.length; i++) {
-        reqFiles.push(url + '/public/' + req.files[i].filename)
-    }
+   
 
 
     const newSite = new Site({
-        imgCollection: reqFiles,
+        imgCollection: req.file.filename,
         title: req.body.title,
         description: req.body.description,
         url: req.body.url,
@@ -84,8 +79,7 @@ exports.update = (req, res) => {
         if (err) {
             return res.json({ 'success': false, 'message': 'Some Error', 'error': err });
         }
-        console.log(site);
-        return res.json({ 'success': true, 'message': 'Updated successfully', site });
+        return res.status(201).json(site);
     })
 }
 exports.remove = (req, res) => {

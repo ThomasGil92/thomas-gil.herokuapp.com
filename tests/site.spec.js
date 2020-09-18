@@ -1,36 +1,16 @@
-const app = require('../src/app')
+const app = require('../app')
 const Site = require('../src/models/site')
-const User = require('../src/models/user')
 const request = require('supertest')
-const mongoose = require('mongoose')
-const jwt = require('jsonwebtoken')
+const {
+    userOne,
+    siteOne,
+    userOneId,
+    setupDatabase
+} = require('./fixtures/db')
 
-const siteTestId = new mongoose.Types.ObjectId()
-const siteTest = {
-    _id: siteTestId,
-    title: "Site test",
-    description: "Site description",
-    skills: ["html,css"],
-    imgCollection: ['tests/fixtures/alsace-661302_1920.jpg'],
-    url: "google.fr",
-    publicationDate: "2020-09-16T08:28:00.853Z"
-}
 
-const userTestId = new mongoose.Types.ObjectId()
-const userTest = {
-    _id: userTestId,
-    name: 'Mike',
-    email: 'mike@example.com',
-    password: '56what!!',
-    token: jwt.sign({ _id: userTestId }, process.env.JWT_SECRET)
-}
 
-beforeAll(async () => {
-    await User.deleteMany()
-    await Site.deleteMany()
-    await new User(userTest).save()
-    await new Site(siteTest).save()
-})
+beforeAll(setupDatabase)
 
 test('Should get site list', async () => {
     const response = await request(app)
@@ -43,7 +23,7 @@ test('Should get site list', async () => {
 
 test('Should get site item by ID', async () => {
     const response = await request(app)
-        .get(`/api/site/${siteTest._id}`)
+        .get(`/api/site/${siteOne._id}`)
         .expect(200)
     const site = await Site.findById(response.body._id)
     expect(response.body).toMatchObject({
@@ -55,17 +35,17 @@ test('Should get site item by ID', async () => {
 })
 
 test('Should create site without error', async () => {
+    /* const data=new FormData() */
     const response = await request(app)
-        .post(`/api/siteAdd/${userTest._id}`)
-        .set('Authorization', `Bearer ${userTest.token}`)
-        .set('Accept', 'application/json')
-        .send({
-            title: "Site test 2",
-            description: "Site description 2",
-            skills: ["html,css"],
-            url: "google.com",
-            publicationDate: "2020-09-16T08:28:00.853Z"
-        })
+        .post(`/api/siteAdd/${userOne._id}`)
+        .set('Authorization', `Bearer ${userOne.token}`)
+        /* .set('Accept', 'application/json') */
+        .field("title", "Site test 2")
+        .field("description", "Site description 2")
+        .field("skills", "html,css")
+        .field("url", "google.com")
+        .field("publicationDate", "2020-09-16T08:28:00.853Z")
+        .attach("imgCollection", 'tests/fixtures/alsace-661302_1920.jpg')
         .expect(201)
     const site = await Site.findById(response.body._id)
     expect(site).not.toBeNull()
@@ -75,17 +55,61 @@ test('Should create site without error', async () => {
     })
     expect(site.imgCollection).toEqual(expect.any(Array))
 })
+test('Should update site without error', async () => {
+    /* const data=new FormData() */
+    const response = await request(app)
+        .put(`/api/site/${siteOne._id}/${userOne._id}`)
+        .set('Authorization', `Bearer ${userOne.token}`)
+        /* .set('Accept', 'application/json') */
+        .field("title", "Site test 4")
+        .field("description", "Site description 4")
+        .field("skills", "html,css")
+        .field("url", "google.net")
+        .field("publicationDate", "2020-09-16T08:28:00.853Z")
+        .attach("imgCollection", 'tests/fixtures/alsace-661302_1920.jpg')
+        .expect(201)
+    const site = await Site.findById(response.body._id)
+    expect(site).not.toBeNull()
+    expect(site).toMatchObject({
+        title: "Site test 4",
+        url: "google.net"
+    })
+    expect(site.imgCollection).toEqual(expect.any(Array))
+})
 
+test('Shouldn\'t create site with bad img format (png)', async () => {
+    /* const data=new FormData() */
+    const response = await request(app)
+        .post(`/api/siteAdd/${userOne._id}`)
+        .set('Authorization', `Bearer ${userOne.token}`)
+        /* .set('Accept', 'application/json') */
+        .field("title", "Site test 3")
+        .field("description", "Site description 3")
+        .field("skills", "html,css")
+        .field("url", "yahoo.com")
+        .field("publicationDate", "2020-09-16T08:28:00.853Z")
+        .attach("imgCollection", 'tests/fixtures/node1.png')
+        .expect(500)
+    expect(response.error.text).toMatch("Only .jpg and .jpeg format allowed!")
+    expect(response.error).toBeTruthy()
+})
 test('Should get a site by id', async () => {
     const response = await request(app)
-        .get(`/api/site/${siteTestId}`)
+        .get(`/api/site/${siteOne._id}`)
         .expect(200)
+})
+test('Should send error when no site founded', async () => {
+    const response = await request(app)
+        .get('/api/site/123nositehere')
+        .expect(400)
+    expect(response.error).toBeTruthy()
+    expect(response.error.text).toMatch("error", "Site not found")
 })
 
 test('Should delete a site by ID', async () => {
     const response = await request(app)
-        .delete(`/api/site/${siteTest._id}/${userTest._id}`)
-        .set('Authorization', `Bearer ${userTest.token}`)
+        .delete(`/api/site/${siteOne._id}/${userOne._id}`)
+        .set('Authorization', `Bearer ${userOne.token}`)
         .set('Accept', 'application/json')
         .expect(200)
     expect(Site.findById(response.body._id).status).not.toBeDefined()

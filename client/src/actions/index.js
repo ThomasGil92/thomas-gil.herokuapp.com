@@ -1,5 +1,6 @@
 import { API } from '../config'
 import { get } from 'axios';
+import axios from 'axios'
 
 
 
@@ -97,13 +98,11 @@ export function setUser() {
 }
 
 export const postSite = (userId, token, site) => {
-  return fetch(`${API}/siteAdd/${userId}`, {
-    method: 'POST',
+  return axios.post(`${API}/siteAdd/${userId}`,site, {
     headers: {
       Accept: 'application/json',
       Authorization: `Bearer ${token}`
-    },
-    body: site
+    }
   })
     .then(response => {
       return response.json();

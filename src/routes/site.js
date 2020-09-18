@@ -1,10 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
-const DIR = '../public/';
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, DIR);
+        cb(null, 'public');
     },
     filename: (req, file, cb) => {
         const fileName = file.originalname.toLowerCase().split(' ').join('-');
@@ -14,11 +13,11 @@ const storage = multer.diskStorage({
 const upload = multer({
     storage: storage,
     fileFilter: (req, file, cb) => {
-        if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg") {
+        if (/* file.mimetype == "image/png" || */ file.mimetype == "image/jpg" || file.mimetype == "image/jpeg") {
             cb(null, true);
         } else {
             cb(null, false);
-            return cb(new Error('Only .png, .jpg and .jpeg format allowed!'));
+            return cb(new Error('Only .jpg and .jpeg format allowed!'));
         }
     }
 });
@@ -44,7 +43,7 @@ const {
 router.post("/siteAdd/:userId", requireSignin, isAuth, upload.single('imgCollection'), create);
 router.get('/siteList', list);
  router.get('/site/:siteId', read);
- router.put('/site/:siteId/:userId', requireSignin, isAuth, upload.array('imgCollection', 6), update);
+ router.put('/site/:siteId/:userId', requireSignin, isAuth, upload.single('imgCollection'), update);
 router.delete('/site/:siteId/:userId', requireSignin, isAuth, remove);
 
 
