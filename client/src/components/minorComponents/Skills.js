@@ -36,6 +36,7 @@ const Skills = () => {
                     <h4 className="color-custom mt-5">Composants:</h4>
                     <ul className="list-group justify-content-center">
                         <li className="list-group-item border-0 py-1 lead">API</li>
+                        <li className="list-group-item border-0 py-1 lead">TDD, BDD, Tests end-to-end</li>
                         <li className="list-group-item border-0 py-1 lead">Gestion de bases de données</li>
                         <li className="list-group-item border-0 py-1 lead">Interfaces administrateurs</li>
                         <li className="list-group-item border-0 py-1 lead">Pages web dynamiques</li>

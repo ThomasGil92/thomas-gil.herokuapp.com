@@ -36,6 +36,7 @@ const SkillsEn = () => {
                     <h4 className="color-custom mt-5">Hard Skills:</h4>
                     <ul className="list-group justify-content-center">
                         <li className="list-group-item border-0 py-1 lead">API</li>
+                        <li className="list-group-item border-0 py-1 lead">TDD, BDD, E2E Tests</li>
                         <li className="list-group-item border-0 py-1 lead">Database management</li>
                         <li className="list-group-item border-0 py-1 lead">Administrator interfaces</li>
                         <li className="list-group-item border-0 py-1 lead">Dynamic web pages</li>
