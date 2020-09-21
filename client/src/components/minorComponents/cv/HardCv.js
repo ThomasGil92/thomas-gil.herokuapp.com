@@ -1,4 +1,4 @@
-import React,{Fragment} from 'react'
+import React, { Fragment } from 'react'
 
 const HardCv = () => {
     return (
@@ -14,14 +14,14 @@ const HardCv = () => {
             <div className="row mt-4 px-3">
                 <div className="col-md-9 col-12">
                     <div className="row px-4 text-justify">
-                        <div className="col-6 d-flex align-items-center"><p><i className="fas fa-at"></i> Tgil849@gmail.com</p></div>
-                        <div className="col-6"><p><i className="fab fa-github-square"></i> ThomasGil92</p></div>
-                        <div className="col-6"><p><i className="fas fa-map-marker-alt"></i> Rueil-Malmaison (92500)</p></div>
-                        <div className="col-6">Âge: 29 ans</div>
-                        <div className="col-6"><p><i className="fas fa-phone-volume"></i> 07.62.50.70.97</p></div>
-                        <div className="col-6"><p><i className="fab fa-linkedin"></i> thomas-g-81543b162</p></div>
+                        <div className="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start"><p><i className="fas fa-at"></i> Tgil849@gmail.com</p></div>
+                        <div className="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start"><p><i className="fab fa-github-square"></i> ThomasGil92</p></div>
+                        <div className="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start"><p><i className="fas fa-map-marker-alt"></i> Rueil-Malmaison (92500)</p></div>
+                        <div className="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start"><p>Âge: 29 ans</p></div>
+                        <div className="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start"><p><i className="fas fa-phone-volume"></i> 07.62.50.70.97</p></div>
+                        <div className="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start"><p><i className="fab fa-linkedin"></i> thomas-g-81543b162</p></div>
                     </div>
-                    <div className="row text-left mt-5">
+                    <div className="row text-left">
                         <div className="col-12">
                             <h1 className="text-center py-md-4">Expériences</h1>
                             <div className="text-justify bg-light py-2 px-4 mb-1">
