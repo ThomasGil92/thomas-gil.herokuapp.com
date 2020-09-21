@@ -7,10 +7,10 @@ const SkillsLevel = () => {
 
     return (
         <Fragment>
-            <div className="text-center py-3 text-dark-2">
+            {/* <div className="text-center py-3 text-dark-2">
                 <h1 className="font-weight-bold mb-2 mt-2">Fullstack web developer</h1>
                 <p className="lead">React / Node / Wordpress</p>
-            </div>
+            </div> */}
             {/* <div className="col-12 col-md-7 my-5 px-5 px-md-2 mx-auto d-flex justify-content-between">
                 <div className="col-6 col-md-4 align-items-center d-flex"><i className="fas text-danger fa-3x fa-long-arrow-alt-right repeat2"></i></div>
 
@@ -19,7 +19,7 @@ const SkillsLevel = () => {
                 </a>
                 <div className="col-3 col-md-4 text-right d-none d-md-block"><i className="fas text-danger fa-3x fa-long-arrow-alt-left repeat1"></i></div>
             </div> */}
-            <div className="card col-12 col-md-10 text-center mx-auto my-5">
+            <div className="card col-12 col-md-10 text-center mx-auto my-5 px-0">
                 <HardCvEn />
             </div>
             <div className="col-12 col-md-9 text-center mx-auto my-5">

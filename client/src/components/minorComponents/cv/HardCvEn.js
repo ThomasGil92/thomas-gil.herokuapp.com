@@ -2,28 +2,28 @@ import React, { Fragment } from 'react'
 
 const HardCvEn = () => {
     return (
-        <div className="py-4" style={{ color: "#515050" }}>
-            <header>
-                <div className="row">
+        <div className="pb-md-4" style={{ color: "#515050" }}>
+            <header className="gradient-custom">
+                <div className="row mb-5 text-white py-md-5 py-3">
                     <div className="col-12">
                         <h1 className="mb-0">Thomas Gil-Escriche</h1>
                         <span>Fullstack web developer</span>
                     </div>
                 </div>
             </header>
-            <div className="row mt-4">
+            <div className="row mt-4 px-3">
                 <div className="col-md-9 col-12">
                     <div className="row px-4 text-justify">
-                        <div className="col-12 mx-auto mx-md-0 col-md-6"><p><i className="fas fa-at"></i> Tgil849@gmail.com</p></div>
-                        <div className="col-12 mx-auto mx-md-0 col-md-6"><p><i className="fab fa-github-square"></i> ThomasGil92</p></div>
-                        <div className="col-12 mx-auto mx-md-0 col-md-6"><p><i className="fas fa-map-marker-alt"></i> Rueil-Malmaison (92500)</p></div>
-                        <div className="col-12 mx-auto mx-md-0 col-md-6 mb-3 mb-md-0"><p>Âge: 29 ans</p></div>
-                        <div className="col-12 mx-auto mx-md-0 col-md-6"><p><i className="fas fa-phone-volume"></i> 07.62.50.70.97</p></div>
-                        <div className="col-12 mx-auto mx-md-0 col-md-6"><p><i className="fab fa-linkedin"></i> thomas-g-81543b162</p></div>
+                        <div className="col-6 d-flex align-items-center"><p><i className="fas fa-at"></i> Tgil849@gmail.com</p></div>
+                        <div className="col-6"><p><i className="fab fa-github-square"></i> ThomasGil92</p></div>
+                        <div className="col-6"><p><i className="fas fa-map-marker-alt"></i> Rueil-Malmaison (92500)</p></div>
+                        <div className="col-6">Âge: 29 ans</div>
+                        <div className="col-6"><p><i className="fas fa-phone-volume"></i> 07.62.50.70.97</p></div>
+                        <div className="col-6"><p><i className="fab fa-linkedin"></i> thomas-g-81543b162</p></div>
                     </div>
                     <div className="row text-left mt-5">
                         <div className="col-12">
-                            <h2 className="text-center">Experiences</h2>
+                            <h1 className="text-center py-md-4">Experiences</h1>
                             <div className="text-justify bg-light py-2 px-4 mb-1">
                                 <h4>July-August 2020</h4>
                                 <p>Development of a project management application which allows to follow according to the selected project, what tasks remain to be performed, how much time remains before delivery of the project, ...</p>
@@ -97,7 +97,7 @@ developers and the second is an e-commerce of books.</p>
 
                         </div>
                         <div className="col-12">
-                            <h2 className="text-center">Trainings</h2>
+                            <h1 className="text-center py-md-4">Trainings</h1>
                             <div className="text-justify bg-light py-2 px-4 mb-1">
                                 <h4>Décember 2019 - February 2020</h4>
                                 <h5>FullStack React.js / Node.js web developer training on "Udemy.com".</h5>
@@ -128,6 +128,89 @@ developers and the second is an e-commerce of books.</p>
                     <div className="col-md-12 col-6 mt-2 mt-md-0 mx-auto">
                         <img className="rounded-circle" src="img/photo-thomas-gil.png" width="100%" />
                     </div>
+                    <div className="text-left comp mt-md-5">
+                        <h4>Hard skills</h4>
+                        <div className="bg-light rounded list-group">
+                            <li className="list-group-item bg-light px-3">
+                                <span>Javascript</span>
+                                <div className="progress">
+                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style={{ width: "60%" }}></div>
+                                </div>
+                            </li>
+                            <li className="list-group-item bg-light px-3">
+                                <span>React</span>
+                                <div className="progress">
+                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{ width: "80%" }}></div>
+                                </div>
+                            </li>
+                            <li className="list-group-item bg-light px-3">
+                                <span>Node.js</span>
+                                <div className="progress">
+                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{ width: "80%" }}></div>
+                                </div>
+                            </li>
+                            <li className="list-group-item bg-light px-3">
+                                <span>TDD</span>
+                                <div className="progress">
+                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style={{ width: "40%" }}></div>
+                                </div>
+                            </li>
+                            <li className="list-group-item bg-light px-3">
+                                <span>Redux</span>
+                                <div className="progress">
+                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style={{ width: "70%" }}></div>
+                                </div>
+                            </li>
+                            <li className="list-group-item bg-light px-3">
+                                <span>Next.js</span>
+                                <div className="progress">
+                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style={{ width: "10%" }}></div>
+                                </div>
+                            </li>
+                            <li className="list-group-item bg-light px-3">
+                                <span>HTML</span>
+                                <div className="progress">
+                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style={{ width: "90%" }}></div>
+                                </div>
+                            </li>
+                            <li className="list-group-item bg-light px-3">
+                                <span>CSS</span>
+                                <div className="progress">
+                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style={{ width: "90%" }}></div>
+                                </div>
+                            </li>
+                            <li className="list-group-item bg-light px-3">
+                                <span>Bootstrap</span>
+                                <div className="progress">
+                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style={{ width: "90%" }}></div>
+                                </div>
+                            </li>
+                            <li className="list-group-item bg-light px-3">
+                                <span>Github</span>
+                                <div className="progress">
+                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style={{ width: "65%" }}></div>
+                                </div>
+                            </li>
+                            <li className="list-group-item bg-light px-3">
+                                <span>MongoDB</span>
+                                <div className="progress">
+                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style={{ width: "75%" }}></div>
+                                </div>
+                            </li>
+                            <li className="list-group-item bg-light px-3">
+                                <span>Wordpress</span>
+                                <div className="progress">
+                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style={{ width: "85%" }}></div>
+                                </div>
+                            </li>
+                            <li className="list-group-item bg-light px-3">
+                                <span>Photoshop</span>
+                                <div className="progress">
+                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style={{ width: "65%" }}></div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
                     <div className="text-left mt-md-5 mt-2 mb-5">
                         <h5>Languages</h5>
                         <ul className="list-group">
@@ -154,59 +237,7 @@ developers and the second is an e-commerce of books.</p>
                             <li className="list-group-item bg-light">Computer science</li>
                         </ul>
                     </div>
-                    <div className="text-left comp">
-                        <h5>Hard skills</h5>
-                        <div className="bg-light px-3 pb-3 border rounded">
-                            <span>HTML</span>
-                            <div className="progress mb-2">
-                                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style={{ width: "90%" }}></div>
-                            </div>
-                            <span>CSS</span>
-                            <div className="progress mb-2">
-                                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style={{ width: "90%" }}></div>
-                            </div>
-                            <span>Javascript</span>
-                            <div className="progress mb-2">
-                                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style={{ width: "50%" }}></div>
-                            </div>
-                            <span>React</span>
-                            <div className="progress mb-2">
-                                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{ width: "80%" }}></div>
-                            </div>
-                            <span>Node.js</span>
-                            <div className="progress mb-2">
-                                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{ width: "80%" }}></div>
-                            </div>
-                            <span>Redux</span>
-                            <div className="progress mb-2">
-                                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style={{ width: "70%" }}></div>
-                            </div>
-                            <span>TDD</span>
-                            <div className="progress mb-2">
-                                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style={{ width: "40%" }}></div>
-                            </div>
-                            <span>Bootstrap</span>
-                            <div className="progress mb-2">
-                                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style={{ width: "90%" }}></div>
-                            </div>
-                            <span>Github</span>
-                            <div className="progress mb-2">
-                                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style={{ width: "65%" }}></div>
-                            </div>
-                            <span>MongoDB</span>
-                            <div className="progress mb-2">
-                                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style={{ width: "75%" }}></div>
-                            </div>
-                            <span>Wordpress</span>
-                            <div className="progress mb-2">
-                                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style={{ width: "85%" }}></div>
-                            </div>
-                            <span>Photoshop</span>
-                            <div className="progress">
-                                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style={{ width: "65%" }}></div>
-                            </div>
-                        </div>
-                    </div>
+
 
                 </div>
             </div>
