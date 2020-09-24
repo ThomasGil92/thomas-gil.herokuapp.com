@@ -1,16 +1,16 @@
 const app = require('../app')
 const User = require('../src/models/user')
 const request = require('supertest')
-const jwt = require('jsonwebtoken')
-const mongoose = require('mongoose')
-const {userById}=require('../src/controllers/user')
 const {
     userOne,
     userTwo,
     setupDatabase
 } = require('./fixtures/db')
 
-beforeAll(setupDatabase)
+beforeEach(setupDatabase)
+afterAll(async () => {
+	await new Promise(resolve => setTimeout(() => resolve(), 500)); // avoid jest open handle error
+});
 test('Should not signup user with bad credentials', async () => {
     const response = await request(app).post('/api/signup')
         .send({
@@ -40,13 +40,14 @@ test('Should signup a new user', async () => {
 })
 
 test('Should signin a user', async () => {
-    await request(app).post('/api/signin')
+    const response=await request(app).post('/api/signin')
         .send({
             email: userOne.email,
             password: userOne.password
         })
         .set('Accept', 'application/json')
         .expect(200)
+        expect(response.body).toBeTruthy()
 })
 test('Should not signin with wrong password', async () => {
     await request(app).post('/api/signin')

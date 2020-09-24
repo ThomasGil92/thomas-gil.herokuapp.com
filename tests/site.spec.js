@@ -10,7 +10,7 @@ const {
 
 
 
-beforeAll(setupDatabase)
+beforeEach(setupDatabase)
 
 test('Should get site list', async () => {
     const response = await request(app)
