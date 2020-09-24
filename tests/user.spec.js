@@ -11,7 +11,7 @@ beforeEach(setupDatabase)
 afterAll(async () => {
 	await new Promise(resolve => setTimeout(() => resolve(), 500)); // avoid jest open handle error
 });
-test('Should not signup user with bad credentials', async () => {
+test('Should not signup user with bad credentials', async (done) => {
     const response = await request(app).post('/api/signup')
         .send({
             name: "Thomas",
@@ -19,7 +19,7 @@ test('Should not signup user with bad credentials', async () => {
         })
         .expect(400)
     expect(response.body.error).not.toBeNull()
-
+done()
 })
 test('Should signup a new user', async () => {
     const response = await request(app).post('/api/signup')
