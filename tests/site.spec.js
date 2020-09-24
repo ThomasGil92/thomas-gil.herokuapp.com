@@ -11,6 +11,9 @@ const {
 
 
 beforeEach(setupDatabase)
+afterAll(async () => {
+	await new Promise(resolve => setTimeout(() => resolve(), 500)); // avoid jest open handle error
+});
 
 test('Should get site list', async () => {
     const response = await request(app)
