@@ -28,7 +28,7 @@ const siteOne = {
     description: "Site description",
     skills: "html,css",
     imgCollection: ['tests/fixtures/alsace-661302_1920.jpg'],
-    url: "google.fr",
+    url: "google.com",
     publicationDate: "2020-09-16T08:28:00.853Z"
 }
 
