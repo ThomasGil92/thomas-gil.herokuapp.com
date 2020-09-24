@@ -35,7 +35,6 @@ const siteOne = {
 
 
 const setupDatabase = async () => {
-    jest.setTimeout(30000)
     await User.deleteMany()
     await Site.deleteMany()
     await new User(userOne).save()
