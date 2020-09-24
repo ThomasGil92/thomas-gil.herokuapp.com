@@ -37,6 +37,9 @@ code {
 		background-position: 0% 50%;
 	}
 }
+.df{
+  list-style-type: disc;
+}
 #cv_top {
   top: 20px;
   right: 20px;

@@ -24,84 +24,191 @@ const CV2 = () => {
                     </div>
                     <div className="row text-left mt-5">
                         <div className="col-12">
-                            <h1 className="text-center py-md-4">Expériences</h1>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
-                                <h4>Juillet-Aout 2020</h4>
-                                <p>Développement d'une application de gestion de projet qui permet de suivre selon le projet séléctionné, quelles tâches il reste à effectuer, combien de temps il reste avant livraison du projet, ...</p>
-                                <br />
+                            <h1 className="text-center py-md-4 w-100 bg-dark text-light rounded">Expériences</h1>
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
+                                <div className="d-flex align-items-end">
+                                    <h4>Juillet-Aout 2020 /</h4><h5> Développement d'une application de gestion de projet</h5>
+                                </div>
+                                <ul>
+                                    <li className="df">Création d'une API Restful pour traiter les données des utilisateurs</li>
+                                    <li className="df">Mise en place de l'authentification par Tokens</li>
+                                    <li className="df">Cryptage de mot de passe</li>
+                                    <li className="df">Mise en place et utilisation d'un serveur Express.js</li>
+                                    <li className="df">Création et gestion de la base de donnée MongoDB</li>
+                                    <li className="df">Étude de users stories</li>
+                                    <li className="df">Gestion de projet</li>
+                                    <li className="df">Gestion du State avec Redux</li>
+                                    <li className="df">Création du design</li>
+                                </ul>
                                 <p><u>Technologies utilisées</u>: React, Node, Redux, MongoDB, Bootstrap/React-bootstrap.</p>
-                                <h6>Lien:</h6>
-                                <p><a href="https://fokjlenot.herokuapp.com" rel="target_blank">Fokjlenot.herokuapp.com</a></p>
+                                <div className="row justify-content-around">
+                                    <div className="card col-5">
+                                        <div className="card-body text-center">
+                                            <h5 class="card-title">Lien du site</h5>
+                                            <li className="list-group-item border-0 py-2"><a href="https://fokjlenot.herokuapp.com" rel="target_blank">Fokjlenot.herokuapp.com</a></li>
+                                        </div>
+                                    </div>
+                                    <div className="card col-5">
+                                        <div className="card-body text-center">
+                                            <h5 class="card-title">Lien répertoire github</h5>
+                                            <li className="list-group-item border-0 py-2"><a href="https://github.com/ThomasGil92/Fokjlenot" rel="target_blank">github.com/ThomasGil92/</a></li>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
-                                <h4>Juin-Juillet 2020</h4>
-                                <p>Développement de mon portfolio en ligne. Création d’une page d’administration avec identification par token pour enregistrer les sites que j’ai créé sous forme de post affiché dynamiquement sur la page d’accueil.</p>
-                                <br />
-                                <p><u>Technologies utilisées</u>: React, Node, Redux, Express.Js, MongoDB.</p>
-                                <h6>Lien:</h6>
-                                <p><a href="https://thomas-gil.fr" rel="target_blank">Thomas-gil.fr</a></p>
-                            </div>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
-                                <h4>Avril-Mai 2020</h4>
-                                <p>Développement d’un site Wordpress pour un cabinet de pédicures-podologues, SEO, webdesign, personalisation du thème, respect des consignes de l’ordre national des pédicures-podologues en matière de sites internet.
-                  <br /><a href="https://podologues-des-bruyeres.fr/" rel="target_blank">Podologues-des-bruyères.fr</a></p>
-                                <p><u>Technologies utilisées</u>: Wordpress, Photoshop, utilisation de "Page Builder", YoastSEO, ...</p>
-                            </div>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
-                                <h4>Janvier-Février 2020</h4>
-                                <p>Développement de 2 projets web grace au MERN stack. Le premier est un réseau social de
-développeurs et le second est un ecommerce de livres.</p>
-                                <p><u>Technologies utilisées</u>: React, MongoDB, Express.js, Node.</p>
-                                <br /><span>(Projets de formations sur <a href="https://www.udemy.com/" rel="target_blank">Udemy.com</a>)</span>
-                            </div>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
-                                <h4>Septembre-Octobre 2019</h4>
-                                <p>Développement d’un blog pour un écrivain sur le modèle de CRUD (Create, Read, Update, Delete).
-                                Introduction à PHP et MySql.
-</p>
-                                <p><u>Technologies utilisées</u>: PHP, HTML, CSS.</p>
-                                <br /><span>(Projet étudiant)</span>
-                            </div>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
-                                <h4>Mai-Juillet 2019</h4>
-                                <p>Développement d’une Single Page Application simulant la réservation en ligne d’un vélo en libre service dans la ville de Nantes. Utilisation de l’API
-                                jcdeceaux pour récupérer les informations en temps réel.
-                                Introduction à Javascript et à la POO.
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
+                                <div className="d-flex align-items-end">
+                                    <h4>Juin-Juillet 2020 /</h4><h5> Développement de mon portfolio en ligne</h5>
+                                </div>
+                                <ul>
+                                    <li className="df">Création d'une API Restful pour enregistrer mes différents projets</li>
+                                    <li className="df">Création d'une interface administrateur pour gérer mes projets</li>
+                                    <li className="df">Mise en place et utilisation d'un serveur Express.js</li>
+                                    <li className="df">Création du design</li>
+                                    <li className="df">Gestion de projet</li>
+                                    <li className="df">Gestion du state avec Redux</li>
+                                    <li className="df">Authentification par tokens</li>
+                                    <li className="df">Déploiement sur heroku</li>
+                                </ul>
 
-</p>
+                                <p><u>Technologies utilisées</u>: React, Node, Redux, Express.Js, MongoDB.</p>
+                                <div className="row justify-content-around">
+                                    <div className="card col-5">
+                                        <div className="card-body text-center">
+                                            <h5 class="card-title">Lien du site</h5>
+                                            <li className="list-group-item border-0 py-2 mt-4"><a href="https://thomas-gil.fr" rel="target_blank">Thomas-gil.fr</a></li>
+                                        </div>
+                                    </div>
+                                    <div className="card col-5">
+                                        <div className="card-body text-center">
+                                            <h5 class="card-title">Lien répertoire github</h5>
+                                            <li className="list-group-item border-0 py-2"><a href="https://github.com/ThomasGil92/thomas-gil.herokuapp.com" rel="target_blank">github.com/ThomasGil92/thomas-gil.herokuapp.com</a></li>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><a href="https://thomas-gil.fr" rel="target_blank"></a></p>
+                            </div>
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
+                                <div className="d-flex align-items-end">
+                                    <h4>Avril-Mai 2020 /</h4><h5> Développement d’un site Wordpress pour un cabinet de pédicures-podologues</h5>
+                                </div>
+                                <ul>
+                                    <li className="df">SEO</li>
+                                    <li className="df">Gestion de projet</li>
+                                    <li className="df">Création du design</li>
+                                    <li className="df">Installation du CMS Wordpress</li>
+                                    <li className="df">Personnalisation du thème Wordpress</li>
+                                    <li className="df">Installation des différentes extensions (YoastSEO, ContactForm, ...)</li>
+                                </ul>
+                                <p><u>Technologies utilisées</u>: Wordpress, Photoshop, utilisation de "Page Builder", YoastSEO, ...</p>
+                                <div className="row justify-content-start">
+                                    <div className="card col-5">
+                                        <div className="card-body text-center">
+                                            <h5 class="card-title">Lien du site</h5>
+                                            <li className="list-group-item border-0 py-2"><a href="https://podologues-des-bruyeres.fr/" rel="target_blank">Podologues-des-bruyères.fr</a></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
+                                <div className="d-flex align-items-end">
+                                    <h4>Janvier-Février 2020 /</h4><h5> Développement de 2 projets web avec le MERN stack</h5>
+                                </div>
+                                <span>Projets de formation (non publiés)</span>
+                                <ul>
+                                    <li className="df">Installation et gestion d'une base de donnée</li>
+                                    <li className="df">Création du design</li>
+                                    <li className="df">Création d'une API Restful pour le traitement des données utilisateurs</li>
+                                    <li className="df">Création d'un serveur Express.js</li>
+                                    <li className="df">Implementation de l'API Paypal pour le paiement en ligne</li>
+                                </ul>
+                                <p><u>Technologies utilisées</u>: React, MongoDB, Express.js, Node.</p>
+
+                            </div>
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
+                                <div className="d-flex align-items-end">
+                                    <h4>Septembre-Octobre 2019 /</h4><h5> Développement d’un blog pour un écrivain</h5>
+                                </div>
+                                <span>Projet de formation (non publié)</span>
+                                <ul>
+                                    <li className="df">Installation et gestion d'une base de donnée</li>
+                                    <li className="df">Création du design</li>
+                                    <li className="df">Implémentation des routes pour la nivagation sur le site</li>
+                                </ul>
+                                <p><u>Technologies utilisées</u>: PHP, HTML, CSS.</p>
+                            </div>
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
+                                <div className="d-flex align-items-end">
+                                    <h4>Mai-Juillet 2019 /</h4><h5> Développement d’une Single Page Application</h5>
+                                </div>
+                                <span>Projet de formation (non publié)</span>
+                                <ul>
+                                    <li className="df">Utilisation de l'API JcDeceaux, API de reservation de vélo en ligne</li>
+                                    <li className="df">Création du design</li>
+                                    <li className="df">Développement en POO</li>
+                                    <li className="df">Requêtes AJAX</li>
+                                    <li className="df">Utilisation de JQuery</li>
+                                </ul>
                                 <p><u>Technologies utilisées</u>: Javascript, HTML, CSS.</p>
-                                <br /><span>(Projet étudiant)</span>
                             </div>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
-                                <h4>Mars-Avril 2019</h4>
-                                <p>Développement d’un site fictif pour l’office de tourisme de Strasbourg avec
-                                intégration d’animation pure Css, modules imposés (derniers articles publiés) ,pages et contenus imposés (une page avec un tableau d’activités à proposer dans la ville, denières actualités, etc.).
-</p>
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
+                                <div className="d-flex align-items-end">
+                                    <h4>Mars-Avril 2019 /</h4><h5> Développement d’un site fictif pour l’office de tourisme de Strasbourg</h5>
+                                </div>
+                                <span>Projet de formation (non publié)</span>
+                                <ul>
+                                    <li className="df">SEO</li>
+                                    <li className="df">Gestion de projet</li>
+                                    <li className="df">Animations en pure CSS</li>
+                                    <li className="df">Création du design</li>
+                                    <li className="df">Installation du CMS Wordpress</li>
+                                    <li className="df">Personnalisation du thème Wordpress</li>
+                                    <li className="df">Installation des différentes extensions (YoastSEO, ContactForm, ...)</li>
+                                </ul>
                                 <p><u>Technologies utilisées</u>: Wordpress, YoastSEO</p>
-                                <br /><span>(Projet étudiant)</span>
                             </div>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
-                                <h4>Février 2019</h4>
-                                <p>Intégration d’une maquette de site internet avec seulement Html, css et
-                                bootstrap (Introduction aux langages de bases du web).
-</p>
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
+                                <div className="d-flex align-items-end">
+                                    <h4>Février 2019 /</h4><h5> Intégration d’une maquette de site internet</h5>
+                                </div>
+                                <span>Projet de formation (non publié)</span>
+                                <ul>
+                                    <li className="df">Découpage de maquette graphique avec Photoshop</li>
+                                    <li className="df">Intégration en grille avec Bootstrap</li>
+                                    <li className="df">Personnalisation du design avec HTML et CSS3</li>
+                                </ul>
                                 <p><u>Technologies utilisées</u>: HTML, CSS, Bootstrap</p>
-                                <br /><span>(Projet étudiant)</span>
                             </div>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
-                                <h4>Septembre 2008 - Novembre 2018</h4>
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
+                                <h4>Septembre 2008 - Novembre 2018 /</h4>
                                 <p>2008 - 2010 : Cuisinier en alternance au restaurant “La place” à
                                 Rueil-Malmaison (Préparation des entrées, plats et desserts, mise en place et entretien de la cuisine)
-
-                                2010 - 2018 : Barman et chef de rang au restaurant “Lavenue” à
-                                Rueil-Malmaison (Préparation et entretien des salles, gestion des boissons et de la mise en place, etc.).
+                                </p>
+                                <p>
+                                    2010 - 2018 : Barman et chef de rang au restaurant “Lavenue” à
+                                    Rueil-Malmaison (Préparation et entretien des salles, gestion des boissons et de la mise en place, etc.).
 </p>
                             </div>
 
                         </div>
                         <div className="col-12">
-                            <h1 className="text-center py-md-4">Formations</h1>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
+                            <h1 className="text-center py-md-4 mt-md-3 w-100 bg-dark text-light rounded">Formations</h1>
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 mt-md-3 border">
+                                <h4>Aout 2020 - Septembre 2020</h4>
+                                <h5>Formation aux requêtes GraphQL sur "Udemy.</h5>
+                                <ul className="list-group bg-light">Compétences aquises:
+                <li className="list-group-item border-0 py-1 bg-light">-Créer un site fullstack React multi-pages avec Node.js, Express.js, MongoDB et GraphQL.</li>
+                                    <li className="list-group-item border-0 py-1 bg-light">-Créer un serveur Apollo.</li>
+                                </ul>
+                            </div>
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 mt-md-3 border">
+                                <h4>Aout 2020</h4>
+                                <h5>Formation au "Test driven development" sur "Udemy.</h5>
+                                <ul className="list-group bg-light">Compétences aquises:
+                <li className="list-group-item border-0 py-1 bg-light">-Créer des tests automatiques pour tester les endpoints d'une API avec Jest et Supertest.</li>
+                                </ul>
+                            </div>
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 mt-md-3 border">
                                 <h4>Décembre 2019 - Février 2020</h4>
                                 <h5>Formation de dévelopeur web FullStack React.js/Node.js sur "Udemy.</h5>
                                 <ul className="list-group bg-light">Compétences aquises:
@@ -110,7 +217,7 @@ développeurs et le second est un ecommerce de livres.</p>
                                     <li className="list-group-item border-0 py-1 bg-light">-Gérer le state avec les hooks.</li>
                                 </ul>
                             </div>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
                                 <h4>Septembre 2018 - Novembre 2019</h4>
                                 <h5>Formation de dévelopeur web au sein de l’organisme de formation "Openclassrooms". </h5>
                                 <ul className="list-group bg-light">Compétences aquises:
@@ -150,6 +257,18 @@ développeurs et le second est un ecommerce de livres.</p>
                                 <span>Node.js</span>
                                 <div className="progress">
                                     <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{ width: "80%" }}></div>
+                                </div>
+                            </li>
+                            <li className="list-group-item bg-light px-3">
+                                <span>API Restful</span>
+                                <div className="progress">
+                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style={{ width: "70%" }}></div>
+                                </div>
+                            </li>
+                            <li className="list-group-item bg-light px-3">
+                                <span>GraphQL</span>
+                                <div className="progress">
+                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style={{ width: "30%" }}></div>
                                 </div>
                             </li>
                             <li className="list-group-item bg-light px-3">
