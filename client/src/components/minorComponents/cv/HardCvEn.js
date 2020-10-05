@@ -21,41 +21,105 @@ const HardCvEn = () => {
                         <div className="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start"><p><i className="fas fa-phone-volume"></i> 07.62.50.70.97</p></div>
                         <div className="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start"><p><i className="fab fa-linkedin"></i> thomas-g-81543b162</p></div>
                     </div>
-                    <div className="row text-left">
+                    <div className="row text-left mt-5">
                         <div className="col-12">
-                            <h1 className="text-center py-md-4">Experiences</h1>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
-                                <h4>July-August 2020</h4>
-                                <p>Development of a project management application which allows to follow according to the selected project, what tasks remain to be performed, how much time remains before delivery of the project, ...</p>
-                                <br />
+                            <h1 className="text-center py-md-4 w-100 bg-dark text-light rounded">Experiences</h1>
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
+                                <div className="d-flex align-items-end">
+                                    <h4>July-August 2020 /</h4><h5> Development of a project management application</h5>
+                                </div>
+                                <ul>
+                                    <li className="df">Creation of a Rest API to treat the users datas</li>
+                                    <li className="df">Tokens authentification</li>
+                                    <li className="df">Password encryption</li>
+                                    <li className="df">Express server setup</li>
+                                    <li className="df">Creation and managment of a MongoDB database</li>
+                                    <li className="df">Project management</li>
+                                    <li className="df">State management with Redux</li>
+                                    <li className="df">Web design</li>
+                                    <li className="df">Deployment</li>
+                                </ul>
                                 <p><u>Technologies used</u>: React, Node, Redux, MongoDB, Bootstrap/React-bootstrap.</p>
-                                <h6>Link:</h6>
-                                <p><a href="https://fokjlenot.herokuapp.com" rel="target_blank">Fokjlenot.herokuapp.com</a></p>
+                                <div className="row justify-content-around">
+                                    <div className="card col-12 col-md-5">
+                                        <div className="card-body text-center">
+                                            <h5 class="card-title">Site link:</h5>
+                                            <li className="list-group-item border-0 py-2"><a href="https://fokjlenot.herokuapp.com" rel="target_blank">Fokjlenot.herokuapp.com</a></li>
+                                        </div>
+                                    </div>
+                                    <div className="card col-12 col-md-5">
+                                        <div className="card-body text-center">
+                                            <h5 class="card-title">Github repo Link:</h5>
+                                            <li className="list-group-item border-0 py-2"><a href="https://github.com/ThomasGil92/Fokjlenot" rel="target_blank">ThomasGil92/Fokjlenot</a></li>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
-                                <h4>June-July 2020</h4>
-                                <p>Development of my online portfolio. Creation of an administration page with token identification to record the sites I have created as a post, dynamically displayed on the home page.</p>
-                                <br />
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
+                                <div className="d-flex align-items-end">
+                                    <h4>June-July 2020 /</h4><h5> Development of my online portfolio</h5>
+                                </div>
+                                <ul>
+                                    <li className="df">Creation of a Rest API to treat the users and tasks datas</li>
+                                    <li className="df">Tokens authentification</li>
+                                    <li className="df">Password encryption</li>
+                                    <li className="df">Express server setup</li>
+                                    <li className="df">Creation and managment of a MongoDB database</li>
+                                    <li className="df">Study of users stories</li>
+                                    <li className="df">Project management</li>
+                                    <li className="df">State management with Redux</li>
+                                    <li className="df">Web design</li>
+                                    <li className="df">Deployment</li>
+                                </ul>
                                 <p><u>Technologies used</u>: React, Node, Redux, Express.Js, MongoDB.</p>
-                                <h6>Link:</h6>
-                                <p><a href="https://thomas-gil.fr" rel="target_blank">Thomas-gil.fr</a></p>
+                                <div className="row justify-content-around">
+                                    <div className="card col-12 col-md-5">
+                                        <div className="card-body text-center">
+                                            <h5 class="card-title">Site link:</h5>
+                                            <li className="list-group-item border-0 py-2 mt-4"><a href="https://thomas-gil.fr" rel="target_blank">Thomas-gil.fr</a></li>
+                                        </div>
+                                    </div>
+                                    <div className="card col-12 col-md-5">
+                                        <div className="card-body text-center">
+                                            <h5 class="card-title">Github repo link:</h5>
+                                            <li className="list-group-item border-0 py-2"><a href="https://github.com/ThomasGil92/thomas-gil.herokuapp.com" rel="target_blank">ThomasGil92/thomas-gil.herokuapp.com</a></li>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
-                                <h4>April-May 2020</h4>
-                                <p>Development of a Wordpress site for a firm of chiropodists. SEO, web design, theme customization, compliance with the guidelines of the national order of chiropodists in terms of websites.</p>
-                                <br />
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
+                                <div className="d-flex align-items-end">
+                                    <h4>April-May 2020 /</h4><h5> Development of a Wordpress site for a firm of chiropodists</h5>
+                                </div>
+                                <p>. SEO, web design, theme customization, compliance with the guidelines of the national order of chiropodists in terms of websites.</p>
+                                <ul>
+                                    <li className="df">Theme customization</li>
+                                    <li className="df">Database and Administrator setup</li>
+                                    <li className="df">SEO</li>
+                                    <li className="df">Web design</li>
+                                    <li className="df">Project management</li>
+                                    <li className="df">Study of users stories</li>
+                                    <li className="df">Compliance with the guidelines of the national order of chiropodists in terms of websites</li>
+                                    <li className="df">Deployment</li>
+                                </ul>
                                 <p><u>Technologies used</u>: Wordpress, Photoshop, utilisation de "Page Builder", YoastSEO, ...</p>
-                                <h6>Link:</h6>
-                                <p><a href="https://podologues-des-bruyeres.fr/" rel="target_blank">Podologues-des-bruyères.fr</a></p>
+                                <div className="row justify-content-start">
+                                    <div className="card col-12 col-md-5">
+                                        <div className="card-body text-center">
+                                            <h5 class="card-title">Site link:</h5>
+                                            <li className="list-group-item border-0 py-2"><a href="https://podologues-des-bruyeres.fr/" rel="target_blank">Podologues-des-bruyères.fr</a></li>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
-                                <h4>January-February 2020</h4>
+                            {/* <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
+                                <h4>January-February 2020 /</h4><h5> Development of 2 web projects thanks to the MERN stack</h5>
                                 <p>Development of 2 web projects thanks to the MERN stack. The first is a social network of
 developers and the second is an e-commerce of books.</p>
                                 <p><u>Technologies used</u>: React, MongoDB, Express.js, Node.</p>
                                 <br /><span>(Training projects on <a href="https://www.udemy.com/" rel="target_blank">Udemy.com</a>)</span>
                             </div>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
                                 <h4>September-October 2019</h4>
                                 <p>Development of a blog for a writer based on the CRUD (Create, Read, Update, Delete) model.
                                 Introduction to PHP and MySql.
@@ -63,7 +127,7 @@ developers and the second is an e-commerce of books.</p>
                                 <p><u>Technologies used</u>: PHP, HTML, CSS.</p>
                                 <br /><span>(Training project)</span>
                             </div>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
                                 <h4>May-July 2019</h4>
                                 <p>Development of a Single Page Application simulating the online reservation of a self-service bicycle in the city of Nantes. Using the API jcdeceaux to retrieve information in real time.Introduction to JavaScript and OOP.
 
@@ -71,21 +135,21 @@ developers and the second is an e-commerce of books.</p>
                                 <p><u>Technologies used</u>: Javascript, HTML, CSS.</p>
                                 <br /><span>(Training project)</span>
                             </div>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
                                 <h4>March-April 2019</h4>
                                 <p>Development of a fictitious site for the Strasbourg tourist office with integration of pure Css animation, imposed modules (last published articles), imposed pages and content (a page with a table of activities to be offered in the city, latest news, ...).
 </p>
                                 <p><u>Technologies used</u>: Wordpress, YoastSEO</p>
                                 <br /><span>(Training project)</span>
                             </div>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
                                 <h4>February 2019</h4>
                                 <p>Integration of a website mockup with only Html, css and bootstrap (introduction to basic web languages).
 </p>
                                 <p><u>Technologies used</u>: HTML, CSS, Bootstrap</p>
                                 <br /><span>(Training project)</span>
-                            </div>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
+                            </div> */}
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
                                 <h4>September 2008 - November 2018</h4>
                                 <p>2008 - 2010 : Alternate cook in the restaurant “La place” in
                                 Rueil-Malmaison (Preparation of starters, main courses and desserts, setting up and maintenance of the kitchen)
@@ -97,8 +161,8 @@ developers and the second is an e-commerce of books.</p>
 
                         </div>
                         <div className="col-12">
-                            <h1 className="text-center py-md-4">Trainings</h1>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
+                            <h1 className="text-center py-md-4 mt-md-3 w-100 bg-dark text-light rounded">Trainings</h1>
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
                                 <h4>Décember 2019 - February 2020</h4>
                                 <h5>FullStack React.js / Node.js web developer training on "Udemy.com".</h5>
                                 <ul className="list-group bg-light">Skills acquired:
@@ -107,7 +171,7 @@ developers and the second is an e-commerce of books.</p>
                                     <li className="list-group-item border-0 py-1 bg-light">-Manage the state with hooks.</li>
                                 </ul>
                             </div>
-                            <div className="text-justify bg-light py-2 px-4 mb-1">
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
                                 <h4>September 2018 - November 2019</h4>
                                 <h5>Web developer training within the training organization "Openclassrooms". </h5>
                                 <ul className="list-group bg-light">Skills acquired:
@@ -147,6 +211,18 @@ developers and the second is an e-commerce of books.</p>
                                 <span>Node.js</span>
                                 <div className="progress">
                                     <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{ width: "80%" }}></div>
+                                </div>
+                            </li>
+                            <li className="list-group-item bg-light px-3">
+                                <span>API Restful</span>
+                                <div className="progress">
+                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style={{ width: "70%" }}></div>
+                                </div>
+                            </li>
+                            <li className="list-group-item bg-light px-3">
+                                <span>GraphQL</span>
+                                <div className="progress">
+                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style={{ width: "40%" }}></div>
                                 </div>
                             </li>
                             <li className="list-group-item bg-light px-3">

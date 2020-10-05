@@ -11,13 +11,13 @@ const HardCv = () => {
                     </div>
                 </div>
             </header>
-            <div className="row mt-4">
+            <div className="row mt-4 px-3">
                 <div className="col-md-9 col-12">
                     <div className="row px-4 text-justify">
                         <div className="col-6 d-flex align-items-center"><p><i className="fas fa-at"></i> Tgil849@gmail.com</p></div>
                         <div className="col-6"><p><i className="fab fa-github-square"></i> ThomasGil92</p></div>
                         <div className="col-6"><p><i className="fas fa-map-marker-alt"></i> Rueil-Malmaison (92500)</p></div>
-                        <div className="col-6">Âge: 28 ans</div>
+                        <div className="col-6">Âge: 29 ans</div>
                         <div className="col-6"><p><i className="fas fa-phone-volume"></i> 07.62.50.70.97</p></div>
                         <div className="col-6"><p><i className="fab fa-linkedin"></i> thomas-g-81543b162</p></div>
                     </div>
@@ -41,16 +41,16 @@ const HardCv = () => {
                                 </ul>
                                 <p><u>Technologies utilisées</u>: React, Node, Redux, MongoDB, Bootstrap/React-bootstrap.</p>
                                 <div className="row justify-content-around">
-                                    <div className="card col-5">
+                                    <div className="card col-12 col-md-5">
                                         <div className="card-body text-center">
                                             <h5 class="card-title">Lien du site</h5>
                                             <li className="list-group-item border-0 py-2"><a href="https://fokjlenot.herokuapp.com" rel="target_blank">Fokjlenot.herokuapp.com</a></li>
                                         </div>
                                     </div>
-                                    <div className="card col-5">
+                                    <div className="card col-12 col-md-5">
                                         <div className="card-body text-center">
                                             <h5 class="card-title">Lien répertoire github</h5>
-                                            <li className="list-group-item border-0 py-2"><a href="https://github.com/ThomasGil92/Fokjlenot" rel="target_blank">github.com/ThomasGil92/</a></li>
+                                            <li className="list-group-item border-0 py-2"><a href="https://github.com/ThomasGil92/Fokjlenot" rel="target_blank">github.com/ThomasGil92/Fokjlenot</a></li>
                                         </div>
                                     </div>
                                 </div>
@@ -72,20 +72,19 @@ const HardCv = () => {
 
                                 <p><u>Technologies utilisées</u>: React, Node, Redux, Express.Js, MongoDB.</p>
                                 <div className="row justify-content-around">
-                                    <div className="card col-5">
+                                    <div className="card col-12 col-md-5">
                                         <div className="card-body text-center">
                                             <h5 class="card-title">Lien du site</h5>
                                             <li className="list-group-item border-0 py-2 mt-4"><a href="https://thomas-gil.fr" rel="target_blank">Thomas-gil.fr</a></li>
                                         </div>
                                     </div>
-                                    <div className="card col-5">
+                                    <div className="card col-12 col-md-5">
                                         <div className="card-body text-center">
                                             <h5 class="card-title">Lien répertoire github</h5>
-                                            <li className="list-group-item border-0 py-2"><a href="https://github.com/ThomasGil92/thomas-gil.herokuapp.com" rel="target_blank">github.com/ThomasGil92/thomas-gil.herokuapp.com</a></li>
+                                            <li className="list-group-item border-0 py-2"><a href="https://github.com/ThomasGil92/thomas-gil.herokuapp.com" rel="target_blank">ThomasGil92/thomas-gil.herokuapp.com</a></li>
                                         </div>
                                     </div>
                                 </div>
-                                <p><a href="https://thomas-gil.fr" rel="target_blank"></a></p>
                             </div>
                             <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
                                 <div className="d-flex align-items-end">
@@ -101,7 +100,7 @@ const HardCv = () => {
                                 </ul>
                                 <p><u>Technologies utilisées</u>: Wordpress, Photoshop, utilisation de "Page Builder", YoastSEO, ...</p>
                                 <div className="row justify-content-start">
-                                    <div className="card col-5">
+                                    <div className="card col-12 col-md-5">
                                         <div className="card-body text-center">
                                             <h5 class="card-title">Lien du site</h5>
                                             <li className="list-group-item border-0 py-2"><a href="https://podologues-des-bruyeres.fr/" rel="target_blank">Podologues-des-bruyères.fr</a></li>
@@ -109,7 +108,7 @@ const HardCv = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
+                            {/* <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
                                 <div className="d-flex align-items-end">
                                     <h4>Janvier-Février 2020 /</h4><h5> Développement de 2 projets web avec le MERN stack</h5>
                                 </div>
@@ -177,7 +176,7 @@ const HardCv = () => {
                                     <li className="df">Personnalisation du design avec HTML et CSS3</li>
                                 </ul>
                                 <p><u>Technologies utilisées</u>: HTML, CSS, Bootstrap</p>
-                            </div>
+                            </div> */}
                             <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
                                 <h4>Septembre 2008 - Novembre 2018 /</h4>
                                 <p>2008 - 2010 : Cuisinier en alternance au restaurant “La place” à
@@ -192,6 +191,17 @@ const HardCv = () => {
                         </div>
                         <div className="col-12">
                             <h1 className="text-center py-md-4 mt-md-3 w-100 bg-dark text-light rounded">Formations</h1>
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 mt-md-3 border">
+                                <h4>Septembre 2020</h4>
+                                <h5>Formation au développement fullstack avec GraphQl sur "Udemy.</h5>
+                                <ul className="list-group bg-light">Compétences aquises:
+                                     <li className="list-group-item border-0 py-1 bg-light">-Créer un site fullstack React multi-pages avec Node.js, Express.js, MongoDB et GraphQL.</li>
+                                    <li className="list-group-item border-0 py-1 bg-light">-Créer un serveur Apollo.</li>
+                                    <li className="list-group-item border-0 py-1 bg-light">-Enregistrer et authentifier les utilisateurs avec Firebase.</li>
+                                    <li className="list-group-item border-0 py-1 bg-light">-Upload d'images avec Cloudinary.</li>
+                                    <li className="list-group-item border-0 py-1 bg-light">-Gestion du state avec Context.</li>
+                                </ul>
+                            </div>
                             <div className="text-justify bg-light rounded py-4 px-4 mb-3 mt-md-3 border">
                                 <h4>Aout 2020 - Septembre 2020</h4>
                                 <h5>Formation aux requêtes GraphQL sur "Udemy.</h5>
@@ -267,7 +277,7 @@ const HardCv = () => {
                             <li className="list-group-item bg-light px-3">
                                 <span>GraphQL</span>
                                 <div className="progress">
-                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style={{ width: "30%" }}></div>
+                                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style={{ width: "40%" }}></div>
                                 </div>
                             </li>
                             <li className="list-group-item bg-light px-3">
